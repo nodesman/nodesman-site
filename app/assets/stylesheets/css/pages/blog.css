@@ -1,0 +1,10 @@
+.blog h1.latest {
+  font-size: 2.5rem;
+}
+.blog .latest-list li {
+  padding: 0;
+  margin: 0;
+}
+.blog .latest-list li a {
+  font-size: 1.5rem;
+}

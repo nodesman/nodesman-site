@@ -1,0 +1,162 @@
+.home {
+  .down-arrow {
+    position: absolute;
+    bottom: 3rem ;
+    left: 0;
+    right: 0;
+    width: 204px;
+    margin: auto;
+  }
+
+  .main-title-heading {
+    text-shadow: 0 1px 1px #000;
+  }
+}
+
+#about {
+  .container {
+    padding-bottom: 0;
+  }
+
+  .seperator {
+    margin: 100px auto;
+  }
+}
+
+#featured-works {
+  padding-top: 20px;
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .sectionIntro {
+    margin: 0 0 50px 0;
+  }
+}
+
+.points {
+  padding: 50px 0 0 0;
+
+  .clearfix;
+
+  .uidevelopment {
+    background-image: asset-path("points/ui.png");
+  }
+
+  .backend {
+    background-image: asset-path("points/backend.png");
+    background-size: 100px;
+  }
+
+  .prototyping {
+    background-image: asset-path("points/prototype.png");
+  }
+
+  .bootstrap {
+    background-image: asset-path("points/rescue.png");
+  }
+
+  .responsive {
+    background-image: asset-path("points/ipad.png");
+    background-size: 80px;
+    background-position-x: 20px;
+  }
+
+
+  .ux {
+    background-image: asset-path("points/ux.png");
+  }
+
+  .item {
+    float: left;
+    width: 50%;
+    padding: 3rem;
+    padding-left: 150px;
+    background-repeat: no-repeat;
+    background-position: 30px 60%;
+
+
+
+    &:nth-child(2n+1) {
+      clear: left;
+    }
+    h2 {
+      font-family: @font;
+      font-size: 1.5rem;
+      color: black;
+      text-transform: none;
+      letter-spacing: normal;
+      text-align: left;
+    }
+    p {
+      margin: 2rem 0 0 0;
+      text-align: left;
+    }
+  }
+}
+
+#latest-posts {
+  background-color: #fff;
+
+  .container {
+    padding: 100px 0;
+  }
+
+  .posts-list {
+    .item {
+
+      h2 {
+        letter-spacing: normal;
+        font-size: 1.8rem;
+
+      }
+
+    }
+  }
+}
+
+#footer {
+  text-align: center;
+  .lineSeparator {
+    margin: 0 auto;
+  }
+  .icons-social {
+    font-size: 2rem;
+    margin: 2rem 0;
+    .fa {
+      font-size: 2.5rem;
+    }
+
+    a {
+      color: #fff;
+      .fa {
+       margin-right: 1rem;
+      }
+      &:nth-of-type(2) {
+        margin-left: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container .sectionIntro .text-center>h2>span {
+      font-size: 2vw;
+      padding: 10px;
+      border-width: 5px;
+  }
+  .owl-wrapper .owl-item:first-child {
+    margin-right: 20px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .points .item {
+    float: none;
+    width: 100%;
+    padding-top: 25px;
+    background-position: 5% 45px;
+  }
+}

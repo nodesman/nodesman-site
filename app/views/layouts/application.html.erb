@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Nodesman - Web Developer</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+  <title><%= yield :title %></title>
+  <%= yield :style %>
 </head>
-<body>
 
 <%= yield %>
 
+<%= yield :post_content %>
 </body>
 </html>

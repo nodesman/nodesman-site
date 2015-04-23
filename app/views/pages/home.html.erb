@@ -1,12 +1,12 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <%= stylesheet_link_tag    'style', media: 'all' %>
+<% content_for :post_content do %>
+    <%= javascript_include_tag 'home' %>
+    <script src="http://use.typekit.net/iku8pjx.js"></script>s
+    <script>try{Typekit.load();}catch(e){}</script>
+<% end %>
 
-  <title>Nodesman - Web Developer</title>
-</head>
+<% content_for :style do %>
+    <%= stylesheet_link_tag 'style' %>
+<% end %>
 
 <body id="bigWrapper" class="home" sdata-spy="scroll" data-target=".navbar-default" data-offset="100">
 
@@ -123,9 +123,7 @@
             <p>Augment the user experience development effort with the creation of concept UX deliverables based on established project standards.</p>
           </div>
         </div>
-
         <img src="assets/separatorBlack.png" class="img-responsive center-block separator" alt="separator">
-
       </div>
     </div>
     <h1 class="parallaxLetter letter3" data-stellar-ratio="1.5" data-stellar-vertical-offset="-600">X</h1>
@@ -255,8 +253,3 @@
     <p class="bold">All Rights Reserved. </p>
   </div>
 </section>
-<%= javascript_include_tag 'home' %>
-<script src="http://use.typekit.net/iku8pjx.js"></script>s
-<script>try{Typekit.load();}catch(e){}</script>
-</body>
-</html>

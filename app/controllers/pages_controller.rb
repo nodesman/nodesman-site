@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
   def home
-    render 'home', :layout => false
+    render 'home'
+  end
+
+  def admin
+    render 'admin-home', :layout => 'admin'
   end
 end

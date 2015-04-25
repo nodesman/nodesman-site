@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
 
   unless Rails.env.production?
-    get 'nestea' => 'pages#admin'
+    get 'nestea' => 'admin#home'
+    get 'admin/pages' => 'admin#pages'
+    get 'admin/pages/add' => 'admin#add_page'
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

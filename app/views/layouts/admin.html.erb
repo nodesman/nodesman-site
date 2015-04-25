@@ -1,15 +1,30 @@
 <html>
 <head>
-  <title></title>
-  <%= stylesheet_link_tag 'admin-styles/bootstrap.min.css' %>
-  <%= stylesheet_link_tag 'admin-styles/main.css' %>
-  <%= stylesheet_link_tag 'admin-styles/plugins.css' %>
-  <%= stylesheet_link_tag 'admin-styles/themes.css' %>
+  <title>Admin</title>
+  <%= stylesheet_link_tag 'admin' %>
+  <%= yield :style %>
+  <%= yield :script_head %>
 </head>
 <body>
 
-<div class="container sidebar-partial sidebar-visible-lg">
-    <%= yield %>
+<div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
+
+  <%= render "admin_sidebar" %>
+
+  <div id="main-container">
+    <header class="navbar navbar-default">
+    </header>
+    <div id="page-content">
+      <%= yield %>
+    </div>
+
+
+    <footer class="clearfix">
+
+    </footer>
+  </div>
 </div>
+
+<%= javascript_include_tag "admin" %>
 </body>
 </html>

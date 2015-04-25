@@ -34,21 +34,7 @@ var Index = function() {
             $('.gmap').css('height', '220px');
 
             // Initialize Timeline map
-            new GMaps({
-                div: '#gmap-timeline',
-                lat: -33.863,
-                lng: 151.202,
-                zoom: 15,
-                disableDefaultUI: true,
-                scrollwheel: false
-            }).addMarkers([
-                {
-                    lat: -33.863,
-                    lng: 151.202,
-                    animation: google.maps.Animation.DROP,
-                    infoWindow: {content: '<strong>Cafe-Bar: Example Address</strong>'}
-                }
-            ]);
+
 
             /*
              * Flot 0.8.2 Jquery plugin is used for charts
@@ -68,27 +54,6 @@ var Index = function() {
             var chartMonths = [[1, 'January'], [2, 'February'], [3, 'March'], [4, 'April'], [5, 'May'], [6, 'June'], [7, 'July'], [8, 'August'], [9, 'September'], [10, 'October'], [11, 'November'], [12, 'December']];
 
             // Initialize Dash Widget Chart
-            $.plot(dashWidgetChart,
-                [
-                    {
-                        data: dataEarnings,
-                        lines: {show: true, fill: false},
-                        points: {show: true, radius: 6, fillColor: '#cccccc'}
-                    },
-                    {
-                        data: dataSales,
-                        lines: {show: true, fill: false},
-                        points: {show: true, radius: 6, fillColor: '#ffffff'}
-                    }
-                ],
-                {
-                    colors: ['#ffffff', '#353535'],
-                    legend: {show: false},
-                    grid: {borderWidth: 0, hoverable: true, clickable: true},
-                    yaxis: {show: false},
-                    xaxis: {show: false, ticks: chartMonths}
-                }
-            );
 
             // Creating and attaching a tooltip to the widget
             var previousPoint = null, ttlabel = null;

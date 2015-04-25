@@ -1,0 +1,30 @@
+<div id="sidebar">
+  <div class="sidebar-scroll">
+    <div class="sidebar-content">
+      <a href="index.html" class="sidebar-brand">
+        <i class="gi gi-flash"></i><strong>Admin</strong>UI
+      </a>
+      <div class="sidebar-section sidebar-user clearfix">
+        <div class="sidebar-user-avatar">
+          <a href="page_ready_user_profile.html">
+            <img src="<%= image_path "me.png" %>" alt="avatar">
+          </a>
+        </div>
+        <div class="sidebar-user-name">Raj</div>
+
+      </div>
+      <ul class="sidebar-nav">
+        <li>
+          <%= link_to "/admin/dashboard" do %>
+            <i class="gi gi-stopwatch sidebar-nav-icon"></i>Dashboard
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "/admin/pages" do %>
+            <i class="gi gi-share_alt sidebar-nav-icon"></i>Pages
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

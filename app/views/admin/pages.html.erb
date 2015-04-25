@@ -12,11 +12,32 @@
   <div class="block-title pages-list-title">
 
     <h2><strong>All Pages</strong></h2>
-
     <%= link_to '/admin/pages/add', :class => 'btn pull-right btn-sm btn-success' do %>
         <i class="fa fa-plus"></i> New</button>
     <% end %>
+
   </div>
-  <!-- END Form Elements Title -->
+  <div class="table-reponsive">
+    <table id="general-table" class="table table-striped table-vcenter">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>Slug</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <%= link_to "/admin/pages/edit/1" do %>
+          This is the test title
+
+          <% end %>
+        </td>
+        <td>/home-page.html</td>
+      </tr>
+      </tbody>
+
+    </table>
+  </div>
 
 </div>

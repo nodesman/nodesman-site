@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'nestea' => 'admin#home'
     get 'admin/pages' => 'admin#pages'
     get 'admin/pages/add' => 'admin#add_page'
+    get 'admin/pages/edit/:id' => 'admin#edit_page'
   end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

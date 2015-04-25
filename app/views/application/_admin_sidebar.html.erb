@@ -15,15 +15,20 @@
       </div>
       <ul class="sidebar-nav">
         <li>
-          <%= link_to "/admin/dashboard" do %>
+          <%= link_to "/nestea" do %>
             <i class="gi gi-stopwatch sidebar-nav-icon"></i>Dashboard
           <% end %>
         </li>
+        <li class="sidebar-header">
+          <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Quick Settings"><i class="gi gi-tint"></i></a></span>
+          <span class="sidebar-header-title">Content</span>
+        </li>
         <li>
           <%= link_to "/admin/pages" do %>
-            <i class="gi gi-share_alt sidebar-nav-icon"></i>Pages
+            <i class="gi gi-show_big_thumbnails sidebar-nav-icon"></i>Pages
           <% end %>
         </li>
+
       </ul>
     </div>
   </div>

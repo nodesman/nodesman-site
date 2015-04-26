@@ -4,6 +4,18 @@ class AdminController < ApplicationController
     render 'admin-home'
   end
 
+  def edit_page
+
+  end
+
+  def contact_info
+
+  end
+
+  def contact_entries
+
+  end
+
   def pages
 
   end

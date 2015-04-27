@@ -26,15 +26,21 @@
       </tr>
       </thead>
       <tbody>
+      <% @pages.each do | page | %>
       <tr>
         <td>
-          <%= link_to "/admin/pages/edit/1" do %>
-          This is the test title
-
+          <%= link_to "/admin/pages/edit/#{page.id}" do %>
+          <%= page.title %>
           <% end %>
         </td>
-        <td>/home-page.html</td>
+        <td><%= page.url_slug %></td>
+        <td>
+          <%= link_to "/admin/page/delete/#{page.id}", :onclick => "return confirm('Are you sure you want to delete this page?');" do %>
+              Delete
+          <% end %>
+        </td>
       </tr>
+      <% end %>
       </tbody>
 
     </table>

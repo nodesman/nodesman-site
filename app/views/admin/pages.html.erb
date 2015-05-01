@@ -26,6 +26,15 @@
       </tr>
       </thead>
       <tbody>
+
+      <% if @pages.length.equal?(0) %>
+
+        <tr>
+          <td colspan="3" align="center">No pages</td>
+        </tr>
+
+      <% end %>
+
       <% @pages.each do | page | %>
       <tr>
         <td>
@@ -35,8 +44,11 @@
         </td>
         <td><%= page.url_slug %></td>
         <td>
-          <%= link_to "/admin/page/delete/#{page.id}", :onclick => "return confirm('Are you sure you want to delete this page?');" do %>
-              Delete
+          <%= form_for :page, :method => :delete do |d| %>
+              <%= hidden_field :page, :id, :value => page.id %>
+              <%= d.submit "Delete", :onclick => "return confirm('Are you sure you want to delete this page?');", :class => 'btn btn-warning' do %>
+                  Delete
+              <% end %>
           <% end %>
         </td>
       </tr>

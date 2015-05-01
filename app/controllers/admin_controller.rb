@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+
   attr_writer :title, :content, :page_type, :content_type, :url_slug
   layout "admin"
 
@@ -19,6 +20,12 @@ class AdminController < ApplicationController
     params.require(:page).permit(:title, :content, :page_type, :content_type, :url_slug)
   end
 
+  def delete_post
+    id = params[:page][:id]
+    Page.delete(id);
+    redirect_to '/admin/pages'
+  end
+
   def contact_info
 
   end
@@ -32,6 +39,7 @@ class AdminController < ApplicationController
   end
 
   def add_page
-
+    @page_types = Page.page_types.invert
+    @content_types = Page.content_types.invert
   end
 end

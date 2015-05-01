@@ -21,6 +21,7 @@
     <table id="general-table" class="table table-striped table-vcenter">
       <thead>
       <tr>
+        <th>ID</th>
         <th>Title</th>
         <th>Slug</th>
       </tr>
@@ -37,6 +38,9 @@
 
       <% @pages.each do | page | %>
       <tr>
+        <td>
+          <%= page.id %>
+        </td>
         <td>
           <%= link_to "/admin/pages/edit/#{page.id}" do %>
           <%= page.title %>

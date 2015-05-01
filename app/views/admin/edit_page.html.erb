@@ -2,26 +2,26 @@
   <div class="block-title pages-list-title">
     <h2><strong>Edit Page</strong></h2>
   </div>
-  <%= form_for :page do %>
+  <%= form_for :page do |f| %>
   <div class="form-bordered form-horizontal">
     <div class="form-group">
       <label class="col-md-5">Title: </label>
       <div class="field col-md-6">
-        <%= text_field :page, :title, :class => 'form-control' %>
+        <%= f.text_field :title, :class => 'form-control' %>
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-md-5">Content Type: </label>
       <div class="field col-md-6">
-        <%= select_tag :page, :@page_types, :class => 'form-control' %>
+        <%= f.select :content_type, options_for_select(@content_types, @page.content_type), { }, :class => 'form-control' %>
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-md-5">Page Type: </label>
       <div class="field col-md-6">
-        <%= select_tag :page, :page_type, :class => 'form-control' %>
+        <%= f.select :page_type, options_for_select(@page_types, @page.page_type), {}, :class => 'form-control' %>
       </div>
     </div>
 

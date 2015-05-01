@@ -42,7 +42,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'devise'
+gem 'seed_dump'
 
 #front-end packages
 gem 'closure-compiler'

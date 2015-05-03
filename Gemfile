@@ -46,3 +46,4 @@ gem 'seed_dump'
 
 #front-end packages
 gem 'closure-compiler'
+gem 'redcarpet'

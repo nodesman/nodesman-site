@@ -6,15 +6,16 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
-
+  get '/articles', :controller => "pages", :action => "articles", :as => "articles_home"
+  get '/article/:slug', :controller => "articles", :action => "default"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
 
-  unless Rails.env.production?
-    get 'nestea' => 'admin#home'
-    get 'admin/pages' => 'admin#pages'
-    get 'admin/pages/add' => 'admin#add_page'
+  if Rails.env.development?
+    get 'nestea' => 'admin#home', :as => "admin_home"
+    get 'admin/pages' => 'admin#pages', :as => "pages_management"
+    get 'admin/pages/add' => 'admin#add_page', :as => "add_page"
     get 'admin/pages/edit/:id' => 'admin#edit_page'
     get 'admin/contact_entries' => 'admin#contact_entries'
     get 'admin/contact_entry/:id' => 'admin#contact_info'

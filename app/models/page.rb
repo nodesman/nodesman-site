@@ -18,5 +18,9 @@ class Page < ActiveRecord::Base
     @content_types
   end
 
+  def is_markdown?
+    content_type == "markdown"
+  end
+
 
 end

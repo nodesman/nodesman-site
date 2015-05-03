@@ -3,4 +3,8 @@ class PagesController < ApplicationController
     render 'home'
   end
 
+  def articles
+    @articles = Page.where :page_type => :article
+    render :layout=> "section"
+  end
 end

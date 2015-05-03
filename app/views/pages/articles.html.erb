@@ -1,0 +1,32 @@
+<%= content_for :style do %>
+    <%= stylesheet_link_tag "articles" %>
+<% end %>
+<%= content_for :title do %>
+    Articles - Nodesman
+<% end %>
+<%= content_for :post_content do %>
+    <%= javascript_include_tag "articles.js" %>
+    <%= render "typekit" %>
+<% end %>
+
+<div class="wrapper">
+  <%= render "header" %>
+    <div class="row essays nonhome">
+      <div class="container">
+        <h3>Recent Articles</h3>
+        <blockquote>
+        <% unless @articles.nil? %>
+          <ul class="article-list">
+            <% @articles.each do |article| %>
+                <li><i class="fa fa-terminal"></i>
+                    <%= link_to "article/" + article.url_slug do %>
+                        <%= article.title %>
+                        <% end %>
+                </li>
+            <% end %>
+          </ul>
+        <% end %>
+        </blockquote>
+      </div>
+    </div>
+</div>

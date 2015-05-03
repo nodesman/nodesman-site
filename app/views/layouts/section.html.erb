@@ -6,9 +6,12 @@
   <title><%= yield :title %></title>
   <%= yield :style %>
 </head>
+
 <body>
+
 <%= yield %>
 
 <%= yield :post_content %>
+<%= render "typekit" %>
 </body>
 </html>

@@ -1,0 +1,44 @@
+@import "base_includes";
+@import "styles/blog";
+
+
+.article-page-container {
+  padding: 10rem  10rem 0 10rem;
+
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    letter-spacing: normal;
+    text-align: center;
+    font-size: 5.2rem;
+    text-transform: none;
+    font-family: @font;
+  }
+}
+
+.article-list {
+  list-style: none;
+  padding: 0 0 0 10px;
+  li {
+    line-height: 40px;
+    font-size: 13px;
+    a {
+      color: #555;
+      &:hover {
+        color: #999;
+        text-decoration: underline;
+      }
+    }
+  }
+  .fa {
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}

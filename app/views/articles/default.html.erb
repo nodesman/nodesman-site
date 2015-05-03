@@ -1,0 +1,29 @@
+<%= content_for :style do %>
+    <%= stylesheet_link_tag "articles" %>
+<% end %>
+
+<%= content_for :title do %>
+    Articles - Nodesman
+<% end %>
+
+<%= content_for :post_content do %>
+    <%= javascript_include_tag "articles.js" %>
+    <%= render "typekit" %>
+<% end %>
+
+<%= render "header" %>
+
+
+<div class="wrapper">
+  <div class="article-page-container nonhome">
+    <h1><%= @article.title %></h1>
+    <div class="content">
+      <% if @article.is_markdown? %>
+          <%= markdown(@article.content) %>
+      <% else %>
+          <%= @article.content.html_safe %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,116 @@
+<% content_for :style do %>
+    <%= stylesheet_link_tag 'portfolio' %>
+<% end %>
+
+<%= render "header" %>
+
+
+<div class="main-content wpa single-portfolio-piece">
+
+  <div class="text-center">
+    <h1>WP Autoresponder</h1>
+
+    <p>(also later known as Javelin Email Marketing)</p>
+  </div>
+
+  <div class="description">
+    <h2>What is it?</h2>
+
+    <p>This was an email marketing plugin that allowed the administrator of a WordPress blog to gather subscribers, set
+      up follow-up emails that go out at specific intervals from the date a given subscriber subscribed, send email
+      broadcasts, deliver blog posts as email broadcasts.</p>
+
+    <p>It basically did what many paid services such as Aweber and Mailchimp did for a fee of ~$600 a year for free with
+      no upper limit on subscriber count or outgoing email limit.</p>
+
+    <p>
+      <a href="https://github.com/nodesman/wp-autoresponder"><%= image_tag "portfolio/wpa-screenshot.png", :width => '80%' %></a>
+      The WP Autoresponder plugin as was listed in early 2014 before it had to be removed from the repository.</p>
+
+    <p>Towards the end of its existence it had received over 120,000 downloads. It had so much success that it was
+      deployed on a 600 tennant WordPress multisite website. Stats on usage indicated that it was deployed on 30,000
+      unique IP addresses and 62,000 WordPress installations as of mid 2012.</p>
+
+    <h2>Why did I make this?</h2>
+
+    <p>I started making this at a time when I was not eligible for credit cards yet.Which means using popular email
+      marketing services were out of my reach even if I had money.</p>
+
+    <p>I also needed a portfolio piece in my WordPress consultant website as I was, at the time, planning on becoming a
+      full time consultant. I have since outgrown developing for WordPress to better platforms.</p>
+
+    <p>For my personal use, I needed to customize the presentation of blog post emails that went out to subscribers new
+      blog posts are published on my website. I needed complete control and flexibility in the way my messages reach
+      subscribers.</p>
+
+    <h2>Why did I stop making it?</h2>
+
+    <p>The development and maintenance of the plugin was incredibly challenging. During the making of this plugin I made
+      many many software development mistakes. Probably made every single known mistake, then invented 10 new ones, then
+      made them too.</p>
+
+    <p>It was so challenging to maintain it &nbsp;that it would have been easier to write it from scratch all over
+      again. Add to that a personal tragedy that struck me in mid 2012 left me with little energy and appetite for
+      taking on the task that was required to revamp it into a worthwhile plugin. I had spent 3 consecutive 14 day
+      annual vacations over rewriting this plugin just to abandon it in the end. Pains me to just think about it.</p>
+
+    <p>But I had to give up on it and move on lest it become a case of the tail that wagged the dog Due to all this the
+      plugin had to be removed from the official repository.</p>
+
+    <h2>Where can I find the source code?</h2>
+
+    <p>I have the copy of the plugin at my <a href="https://github.com/nodesman/wp-autoresponder">GitHub account</a>.
+    </p>
+
+    <h2>What are the (painful) lessons I learnt from making this extension?</h2>
+
+    <h3>On Features</h3>
+
+    <p>Every feature I add into a plugin can become a selling point. It can also become a huge liability that could be
+      the death knell to a software project. There were some features in the plugin that were useful to a very small set
+      of users as well as features that were broadly useful to everyone.</p>
+
+    <p>The enormous scope of the project meant after a certain point adding a new feature meant things broke all over
+      the place. Back in the days when I started developing the plugin I was not the best of programmers with limited
+      experience. As a result my <strong>code as horrendous </strong>and became a nightmare to maintain.</p>
+
+    <h3>Limit Features</h3>
+
+    <p>I learnt that you should start your web application with a limited feature set and nail them to perfection
+      incrementally and then. Having more features will not ensure the success of a web application.</p>
+
+    <h3>More Features ≠ Success</h3>
+
+    <p>Furthermore a feature set and the corresponding user experience was like an appeal to a worldview. An application
+      with the user experience that I defined will appeal to different people than another application.</p>
+
+    <h3>Race to Premium</h3>
+
+    <p>I should have made the effort to ensure that the development of the plugin was profitable as soon as possible. It
+      was not enough to rely on consulting work that came from it. Creating something so large just to settle with
+      consulting work that comes from it was overkill. A huge missed opportunity. There was a huge opportunity to
+      monetize the plugin through a premium version/hosted version that could have sustained my development on the
+      plugin and made it the WordPress standard for email marketing.</p>
+
+    <h3>Why does having made this make me a better engineer?</h3>
+
+    <p>Having the experience of having made this makes me a better engineer in the following ways:</p>
+    <ol>
+      <li><strong>Better UX: </strong>If there is one thing my plugin did better than a lot of other plugins, it was
+        provide a better UX. I am not saying it was pretty. But it communicated the idea of what it was meant for very
+        well to anyone who might install it and give it a spin.I have experience handling bewildering support tickets
+        that could be solved with changes to the messaging in the user experience.
+      </li>
+      <li><strong>Experience Building Distributable Software: </strong>There are many unique challenges that one faces
+        when writing software that is meant to be distributed and installed in end-users’ individual servers as against
+        web applications that are deployed in one server that multitude of users use.
+      </li>
+      <li><strong>End-to-End Development: </strong>I was good at developing and deploying software in a large variety of
+        environments from the most restrictive to the fairly liberal ones and the challenges those environments post and
+        what we need to do to proactively overcome those issues.
+      </li>
+    </ol>
+  </div>
+
+
+</div>

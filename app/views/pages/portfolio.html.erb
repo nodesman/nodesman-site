@@ -1,0 +1,89 @@
+<% content_for :post_content do %>
+    <script src="http://use.typekit.net/iku8pjx.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+<% end %>
+
+<%= content_for :title do %> Nodesman's Portfolio <% end %>
+
+<% content_for :style do %>
+    <%= stylesheet_link_tag 'portfolio' %>
+<% end %>
+
+<%= render "header" %>
+
+<div class="portfolio-wrapper">
+  <section id="portfolio">
+
+    <div class="portfolioIntro text-center">
+      <div class="black-overlay"></div>
+      <br><br>
+      <h2 data-scroll-reveal="enter top move 10px over 1s after 0.2s" data-scroll-reveal-id="1" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
+        <span>Portfolio</span>
+      </h2>
+
+    </div>
+    <div class="portfolioFilters text-center">
+
+    </div>
+
+    <div class="items">
+
+      <div class="portfolio-archive">
+        <article>
+          <div class="angularfeed portfolio-piece excerpt">
+            <%= link_to "/angularfeed" do %><%= image_tag "portfolio/angularfeed-excerpt.png", :class => 'teaser' %><% end %>
+            <div class="lead-text">
+              <h1><%= link_to "/angularfeed" do %>AngularFeed<% end %></h1>
+              <p>AngularJs based RSS Feed Reader</p>
+              <br><br>
+              <div class="features">
+                <ul>
+                  <li>Subscribe to any number of RSS feeds organized into a optional folder structure</li>
+                  <li>No account needed. Your subscriptions reside on your browser in the localStorage</li>
+                  <li>Organized date wise and presented in a readable format along the lines of Reeder 2.</li>
+                </ul>
+              </div>
+              <div class="details">
+                <a href="https://github.com/nodesman/angularfeed">View on Github</a> | <a href="http://angularfeed.nodesman.com">View demo</a>
+              </div>
+              <div class="tags">
+                <span class="tag"><a href="#" rel="tag">AngularJs</a><a href="#" rel="tag">localStorage</a><a href="#" rel="tag">Rails 4</a></span>        </div>
+              <a class="btn btn-default btn-black read-more" href="http://nodesman.com/portfolio/angularfeed/">READ MORE</a>
+            </div>
+          </div></article><article>
+        <div class="wpa portfolio-piece excerpt">
+          <%= link_to "/wp" do %><%= image_tag "portfolio/wpa-excerpt.png", :class => "teaser" %><% end %>
+          <div class="lead-text">
+            <h1><%= link_to "/wp" do %>WP Autoresponder (aka Javelin Email Marketing)<% end %></h1>
+            <span class="minor-blue-heading">WORDPRESS EXTENSION</span>
+            <div class="stats">
+              <span class="fecal-text">124,000</span> |
+              <span class="fecal-text">13 releases</span>
+            </div>
+
+            <p>WP Autoresponder was a WordPress extension that brought the email marketing capabilities of popular email services like mailchimp and Aweber to WordPress.</p>
+            <div class="features">
+              <ul>
+                <li>Follow Up Autoresponders</li>
+                <li>Deliver blog posts as autoresponder emails</li>
+                <li>Deliver blog post emails as they happen</li>
+              </ul>
+
+              <ul>
+                <li>Send segmented broadcasts</li>
+                <li>Provide subscription to specific post categories.</li>
+                <li>Attach custom fields to all outgoing email</li>
+              </ul>
+            </div>
+            <div class="details">
+              <a href="https://github.com/nodesman/wp-autoresponder">View on Github</a>
+            </div>
+            <div class="tags">
+              <span class="tag"><a href="#" rel="tag">PHP</a><a href="#" rel="tag">WordPress</a></span>        </div>
+            <a class="btn btn-default btn-black read-more   " href="http://nodesman.com/portfolio/wp-autoresponder/">READ MORE</a>
+          </div>
+        </div></article>                <h2 class="more btn btn-default btn-black ">More coming soon...</h2>
+      </div>
+    </div>
+  </section>
+</div>

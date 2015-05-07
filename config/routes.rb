@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/articles', :controller => "pages", :action => "articles", :as => "articles_home"
   get '/article/:slug', :controller => "articles", :action => "default"
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get '/portfolio', :controller => "pages", :action => "portfolio", :as => "portfolio"
+  get '/angularfeed', :controller => "pages", :action => "angular_feed", :as => "angular_feed"
+  get '/wp', :controller => "pages", :action => "wpr", :as => "wpr"
 
+  get '404', :to => "pages#not_found"
 
   if Rails.env.development?
     get 'nestea' => 'admin#home', :as => "admin_home"
@@ -19,7 +21,6 @@ Rails.application.routes.draw do
     get 'admin/pages/edit/:id' => 'admin#edit_page'
     get 'admin/contact_entries' => 'admin#contact_entries'
     get 'admin/contact_entry/:id' => 'admin#contact_info'
-
     post 'admin/pages/add' => 'admin#add_page_post'
     post 'admin/pages/edit/:id' => 'admin#edit_page_post'
     delete 'admin/pages' => 'admin#delete_post'

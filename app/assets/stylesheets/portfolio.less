@@ -1,0 +1,39 @@
+@import "base_includes";
+@import "styles/portfolio-archive";
+@import "styles/angularfeed";
+@import "styles/wpa";
+@import "styles/wpa-full";
+.portfolio-hero {
+  text-align: center;
+}
+
+.portfolioIntro{
+  position:relative;
+  z-index:2;
+  background: image-url('portfolio/header.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 0, 50% 0, 50% 0, 50% 0;
+  background-repeat: repeat, repeat, repeat ,no-repeat;
+}
+
+#portfolio .black-overlay{
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#portfolio .container{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+.portfolio-wrapper {
+}

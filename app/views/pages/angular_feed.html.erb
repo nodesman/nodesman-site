@@ -1,0 +1,20 @@
+<% content_for :style do %>
+    <%= stylesheet_link_tag 'portfolio' %>
+<% end %>
+
+<%= render "header" %>
+
+<div class="portfolio-piece angularfeed">
+  <h1 class="text-center">Anugular Feed</h1>
+  <p></p>
+  <div class="portfolio-hero">
+      <%= image_tag "portfolio/angularfeed-full.png", :width => '80%' %>
+  </div>
+
+  <p>This is a RSS Feed reader written in AngularJs. This uses your browser’s localStorage API to store your subscription information, which means no accounts need to be created for showing you subscriptions.
+    </p>
+
+  <p>
+  The application uses a Rails 4 back-end to perform the request to the various RSS feed URLs (since it is impossible to request those URLs directly because of cross-origin request limitations in latest browsers).
+  </p>
+</div>

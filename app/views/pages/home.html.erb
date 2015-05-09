@@ -1,7 +1,11 @@
 <% content_for :post_content do %>
     <%= javascript_include_tag 'home' %>
-    <script src="http://use.typekit.net/iku8pjx.js"></script>s
+    <script src="http://use.typekit.net/iku8pjx.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+<% end %>
+
+<% content_for :title do %>
+    Nodesman - Web Developer
 <% end %>
 
 <% content_for :style do %>
@@ -158,7 +162,7 @@
               <div class="caption-heading">
                 <h5>AngularFeed</h5>
                 <p>AngularJs based RSS feed reader that works entirely off the browser. Uses Rails 4 for proxying requests for the feed content. </p>
-                <a class="btn btn-default btn-black" id="trigger-overlay"  href="index.html?post_type=portfolio_piece&amp;p=176">More</a>
+                <a class="btn btn-default btn-black" id="trigger-overlay"  href="<%= angular_feed_url %>">More</a>
               </div>
             </div>
           </div>
@@ -168,13 +172,12 @@
               <div class="caption-heading">
                 <h5>WP Autoresponder</h5>
                 <p>A complete Email Marketing application for WordPress that does everything</p>
-                <a class="btn btn-default btn-black" id="trigger-overlay"  href="index.html?post_type=portfolio_piece&amp;p=89">More</a>
+                <a class="btn btn-default btn-black" id="trigger-overlay"  href="<%= wpr_url %>">More</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -192,18 +195,27 @@
 
       <div class=" col-md-9 col-sm-12 posts-list" data-scroll-reveal="enter right move 10px over 1s after 0.2s">
 
-        <div class="item">
-          <a href="index.html?p=185"><h2>Making software is not easy</h2></a>
-          <div>Creating a piece of software takes a given amount of time and resources. Attempting to make it for any less means something is compromised on either scope, quality or sustainability. </div>
-        </div>
-        <div class="item">
-          <a href="index.html?p=172"><h2>How To Fetch The favicon.ico Of A Website Using Ruby?</h2></a>
-          <div>In this post I discuss how to fetch the favicon of a website in a server-side ruby application.</div>
-        </div>
-        <div class="item">
-          <a href="index.html?p=162"><h2>Require.js: The Async Module Loader for your code today</h2></a>
-          <div>The number of front-end dependency management tools are increasing every day. Require.js is the front-end dependency management tool for today. It is the best tool for new code base as well as code you may already have written and are maintaining. This article goes into why. </div>
-        </div>
+        <% @articles.each do |article| %>
+
+            <div class="item">
+              <%= link_to article_url(article.url_slug) do %>
+                  <h2><%= article.title %></h2>
+              <% end %>
+
+              <div>
+                 <%
+                 if article.content_type == "markdown"
+                     content = markdown(article.content)
+                 else
+                   content = article.content
+                 end
+                 content_truncate_words =  content.truncate_words 30
+                 %>
+                <%= content_truncate_words.html_safe %>
+              </div>
+            </div>
+
+        <% end %>
 
 
       </div>

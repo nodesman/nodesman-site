@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#home'
   get '/articles', :controller => "pages", :action => "articles", :as => "articles_home"
-  get '/article/:slug', :controller => "articles", :action => "article"
+  get '/article/:slug', :controller => "articles", :action => "default", :as => "article"
   get '/portfolio', :controller => "pages", :action => "portfolio", :as => "portfolio"
   get '/angularfeed', :controller => "pages", :action => "angular_feed", :as => "angular_feed"
   get '/wp', :controller => "pages", :action => "wpr", :as => "wpr"

@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
   def home
-    render 'home'
+    @articles = Page.limit(3).order(created_at: :desc).where :page_type => :article
   end
+
   def articles
-    @articles = Page.where :page_type => :article
+    @articles = Page.order(created_at: :desc).where :page_type => :article
     render :layout=> "section"
   end
 

@@ -22,19 +22,21 @@
         </tr>
         </thead>
         <tbody>
+        <% @contact_entries.each do |entry| %>
         <tr>
           <td>
             <%= link_to "/admin/contact_entry/1" do %>
-                This is the test title
+            <%= entry.subject %>
             <% end %>
           </td>
           <td>
-            10th May 2011
+            <%= l entry.created_at, format: :short %>
           </td>
           <td>
-            12:11AM
+            <%= entry.ip_address %>
           </td>
         </tr>
+        <% end %>
         </tbody>
 
       </table>

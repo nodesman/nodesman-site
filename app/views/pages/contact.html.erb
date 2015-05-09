@@ -1,0 +1,32 @@
+<% content_for :post_content do %>
+    <%= render "typekit" %>
+<% end %>
+<% content_for :style do %>
+    <%= stylesheet_link_tag "contact" %>
+<% end %>
+<%= render "header" %>
+<div class="contact-page">
+    <h2>Contact</h2>
+  <p>Please fill out the following form to get in touch with me. </p>
+  <%= form_for :contact_form_entry  do |f| %>
+
+      <div class="field">
+        <%= f.text_field  :name, :placeholder => "Name" %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :email, :placeholder => "E-mail Address" %>
+      </div>
+
+      <div class="field">
+        <%= f.text_field :subject, :placeholder => "Subject" %>
+      </div>
+
+      <div class="field">
+        <%= f.text_area :message, :placeholder => "Your Message Goes Here" %>
+      </div>
+      <div class="submit">
+        <%= f.submit "Send", :class => 'more btn btn-default btn-black' %>
+      </div>
+  <% end %>
+</div>

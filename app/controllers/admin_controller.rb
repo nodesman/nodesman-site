@@ -32,7 +32,6 @@ class AdminController < ApplicationController
   def new_post_params
     data = params.require(:page).permit(:title, :content, :page_type, :content_type, :url_slug)
     data[:url_slug] = data[:url_slug].parameterize
-
     data
   end
 
@@ -47,7 +46,7 @@ class AdminController < ApplicationController
   end
 
   def contact_entries
-
+    @contact_entries = ContactFormEntry.all()
   end
 
   def pages

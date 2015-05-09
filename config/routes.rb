@@ -7,11 +7,15 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#home'
   get '/articles', :controller => "pages", :action => "articles", :as => "articles_home"
-  get '/article/:slug', :controller => "articles", :action => "default"
+  get '/article/:slug', :controller => "articles", :action => "article"
   get '/portfolio', :controller => "pages", :action => "portfolio", :as => "portfolio"
   get '/angularfeed', :controller => "pages", :action => "angular_feed", :as => "angular_feed"
   get '/wp', :controller => "pages", :action => "wpr", :as => "wpr"
+  get '/contact', :controller => "pages", :action => "contact", :as => "contact"
 
+  post '/contact', :controller => "pages", :action => "contact_post"
+
+  get '/contact_done', :controller => "pages", :action => "contact_form_filled", :as => "contact_form_filled"
   get '404', :to => "pages#not_found"
 
   if Rails.env.development?

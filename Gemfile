@@ -43,7 +43,7 @@ group :development, :test do
 end
 gem 'capistrano-db-tasks', require: false
 gem 'seed_dump'
-
+gem 'mysql2'
 #front-end packages
 gem 'closure-compiler'
 gem 'redcarpet'

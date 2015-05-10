@@ -1,1 +1,0 @@
-var Login=function(){return{init:function(){var e=$("#form-login"),t=$("#form-register");$("#link-login").click(function(){e.slideUp(250),t.slideDown(250,function(){$("input").placeholder()})}),$("#link-register").click(function(){t.slideUp(250),e.slideDown(250,function(){$("input").placeholder()})}),"#register"===window.location.hash&&(e.hide(),t.show())}}}();

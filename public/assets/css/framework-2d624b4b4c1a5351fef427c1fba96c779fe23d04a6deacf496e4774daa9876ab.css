@@ -1,8 +1,0 @@
-.nowrap {
-  white-space: nowrap;
-}
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}

@@ -1,0 +1,53 @@
+@import (reference) "../style";
+.nonhome {
+  min-height: 80%;
+
+  header {
+    background-color: #001b27;
+    .logo {
+      height: 2rem;
+      float: left;
+      margin: 2rem;
+    }
+
+    
+    nav {
+      .navigation;
+    }
+    .clearfix;
+  }
+  
+  footer {
+    padding: 2rem;
+    background-color: #000;
+  }
+}
+ 
+@media (max-width: 700px) {
+  
+  .nonhome {
+    header {
+      padding: 1rem 0 0 0;
+      .logo {
+        float: none;
+        display: block;
+        width: 16rem;
+        margin: 0 auto;
+      }
+      nav {
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+        ul {
+          li {
+            float: none;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+}

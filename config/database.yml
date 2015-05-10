@@ -26,4 +26,3 @@ production:
   username: nodesman_com
   password: Famous@2015
   host: localhost
-  socket: /tmp/mysql.sock

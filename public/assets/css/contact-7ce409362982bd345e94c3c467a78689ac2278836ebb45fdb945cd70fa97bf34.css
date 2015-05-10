@@ -1,0 +1,51 @@
+.contact {
+  max-width: 1280rem;
+  margin: 10rem auto 5rem auto;
+  width: 90%;
+}
+.contact .contact-contents {
+  width: 70%;
+  margin: 0 auto 3rem auto;
+  font-size: 1.6rem;
+}
+.contact .contact-contents h1 {
+  font-size: 4rem;
+}
+.contact .contact-contents form {
+  max-width: 800px;
+  width: 100%;
+}
+.contact .contact-contents form tr td {
+  padding: 1rem;
+}
+.contact .contact-contents form input[type="text"],
+.contact .contact-contents form input[type="email"],
+.contact .contact-contents form textarea {
+  margin-top: 1rem;
+}
+.contact .contact-contents form input[type="text"],
+.contact .contact-contents form input[type="email"] {
+  height: 3rem;
+  border: 0.1rem solid #999;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  width: 80%;
+  border-radius: 0.3rem;
+}
+.contact .contact-contents form textarea {
+  width: 100%;
+  height: 30rem;
+  font-family: "proxima-nova-alt", Arial;
+  border: 0.1rem solid #888;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+.contact .contact-contents form input[type="submit"] {
+  background-color: #000;
+  border: 0;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #fff;
+  width: 20rem;
+}

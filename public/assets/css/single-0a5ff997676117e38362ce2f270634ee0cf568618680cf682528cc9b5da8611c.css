@@ -1,0 +1,20 @@
+.single-page {
+  width: 80%;
+  margin: 0 auto;
+}
+.single-page h1 {
+  font-size: 4rem;
+  color: #e44e30;
+  text-align: center;
+}
+.single-page h1 a {
+  text-decoration: none;
+}
+.single-page .page-content {
+  padding: 2rem;
+  font-size: 1.8rem;
+  line-height: 3.4rem;
+}
+.single-page .page-content a {
+  color: #17a8fd;
+}

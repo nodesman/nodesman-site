@@ -1,0 +1,37 @@
+div.essays {
+  max-width: 1280px;
+  margin: 10rem auto 5rem auto;
+}
+div.essays h1.latest {
+  font-size: 2.5rem;
+}
+div.essays article {
+  margin-bottom: 5rem;
+}
+div.essays .switch ul {
+  list-style: none;
+  padding: 0;
+}
+div.essays .switch ul li {
+  display: inline-block;
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
+}
+div.essays .switch ul li:hover {
+  background-color: #eee;
+}
+div.essays h2 {
+  letter-spacing: normal;
+}
+div.essays h1 {
+  letter-spacing: normal;
+  font-size: 3rem;
+  text-align: center;
+}
+div.essays .latest-list li {
+  padding: 0;
+  margin: 0;
+}
+div.essays .latest-list li a {
+  font-size: 1.5rem;
+}

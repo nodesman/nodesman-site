@@ -1,0 +1,14 @@
+.search-results .search-body {
+  min-height: 50rem;
+  margin: 10rem auto 10rem auto;
+  max-width: 1280px;
+  width: 90%;
+}
+.search-results .hentry {
+  margin-left: 5rem;
+}
+.search-results h1,
+.search-results h2,
+.search-results h3 {
+  letter-spacing: normal;
+}

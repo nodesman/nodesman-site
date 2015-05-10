@@ -1,0 +1,1 @@
+var Icons=function(){return{init:function(){var e;$("#page-content .btn").click(function(){return e=$(this).attr("data-original-title"),$("#icon-gen-input").val('<i class="'+e+'"></i>').select(),$("html,body").animate({scrollTop:$("#icon-gen").offset().top-15}),!1})}}}();

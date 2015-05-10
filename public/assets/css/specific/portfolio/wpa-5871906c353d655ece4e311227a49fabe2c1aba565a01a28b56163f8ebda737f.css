@@ -1,0 +1,75 @@
+.wpa.excerpt.portfolio-piece {
+  margin: 2rem 0 0 0 ;
+}
+.wpa.excerpt.portfolio-piece:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wpa.excerpt.portfolio-piece .teaser {
+  float: left;
+  width: 30%;
+  min-height: 35rem;
+}
+.wpa.excerpt.portfolio-piece .tag {
+  font-size: 1.4rem;
+}
+.wpa.excerpt.portfolio-piece .lead-text {
+  padding: 0 0 0 2rem;
+  width: 68%;
+  float: left;
+}
+.wpa.excerpt.portfolio-piece .lead-text .moderate-black-button {
+  margin: 4rem 0 0 0;
+}
+.wpa.excerpt.portfolio-piece .lead-text .minor-blue-heading {
+  font-size: 1.6rem;
+  color: #105b9a;
+  display: inline-block;
+  margin: 0.5rem 0 0 0;
+}
+.wpa.excerpt.portfolio-piece .lead-text .stats {
+  font-size: 1.5rem;
+  color: #9a5410;
+  margin: 0.5rem 0 0 0;
+}
+.wpa.excerpt.portfolio-piece .lead-text p {
+  font-size: 1.6rem;
+}
+.wpa.excerpt.portfolio-piece .lead-text .features ul {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wpa.excerpt.portfolio-piece .lead-text .features ul:nth-of-type(2) {
+  margin-left: 2rem;
+}
+.wpa.excerpt.portfolio-piece .lead-text .features ul li {
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.wpa.excerpt.portfolio-piece .lead-text .features ul li:before {
+  content: '-';
+  position: absolute;
+  top: 0rem;
+  left: 0.8rem;
+}
+.wpa.excerpt.portfolio-piece .lead-text .features:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wpa.excerpt.portfolio-piece .lead-text .fecal-text {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.wpa.excerpt.portfolio-piece .lead-text .fecal-text:nth-of-type(1) {
+  margin-left: 0;
+}
+.wpa.excerpt.portfolio-piece .lead-text h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}

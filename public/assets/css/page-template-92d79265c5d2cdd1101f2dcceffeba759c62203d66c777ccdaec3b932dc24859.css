@@ -1,0 +1,18 @@
+.pageit {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  min-height: 70%;
+}
+.pageit h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.pageit h1 a {
+  text-decoration: none;
+  color: #17a8fd;
+}
+.pageit .description {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}

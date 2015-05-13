@@ -38,8 +38,9 @@ after "deploy:setup", "deploy:restart"
 
 namespace :deploy do
   task :setup, :roles => :web do
-    run "rake db:drop && rake db:create && rake db:migrate"
-    run "rake db:seed"
+    run "export RAILS_ENV=production && rake db:drop && rake db:create && rake db:migrate"
+    run "export RAILS_ENV=production && rake assets:clobber && assets:precompile"
+    run "export RAILS_ENV=production && rake db:seed"
   end
 
   after :restart, :clear_cache do

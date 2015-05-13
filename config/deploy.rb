@@ -33,8 +33,15 @@ set :pty, true
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+after :deploy, "deploy:setup"
+after "deploy:setup", "deploy:restart"
+
 namespace :deploy do
-  after :deploy, "deploy:migrate"
+  task :setup, :roles => :web do
+    run "rake db:drop && rake db:create && rake db:migrate"
+    run "rake db:seed"
+  end
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:

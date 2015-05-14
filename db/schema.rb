@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509123110) do
+ActiveRecord::Schema.define(version: 20150514182701) do
 
   create_table "contact_form_entries", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150509123110) do
     t.string   "name"
     t.string   "email"
     t.string   "subject"
-    t.string   "message"
+    t.text     "message"
     t.string   "ip_address"
   end
 
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150509123110) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "title"
-    t.string   "content"
+    t.text     "content"
     t.string   "page_type"
     t.string   "content_type"
     t.string   "url_slug"

@@ -45,6 +45,7 @@ namespace :deploy do
   before :restart, :setup_db do
     on roles(:web) do
       within release_path do
+        execute :bundle, :install
         execute :rake, 'db:drop'
         execute :rake, 'db:create'
         execute :rake, 'db:migrate'

@@ -1,9 +1,9 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+
 set :application, 'nodesman'
 set :repo_url, 'git@bitbucket.org:nodesman/nodesman.git'
-
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
@@ -33,14 +33,26 @@ set :pty, true
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-after :deploy, "deploy:setup"
-after "deploy:setup", "deploy:restart"
+
 
 namespace :deploy do
-  task :setup, :roles => :web do
-    run "export RAILS_ENV=production && rake db:drop && rake db:create && rake db:migrate"
-    run "export RAILS_ENV=production && rake assets:clobber && assets:precompile"
-    run "export RAILS_ENV=production && rake db:seed"
+  # task :setup_things, roles: :web do
+  #   run "export RAILS_ENV=production && rake db:drop && rake db:create && rake db:migrate"
+  #   run "export RAILS_ENV=production && rake assets:clobber && assets:precompile"
+  #   run "export RAILS_ENV=production && rake db:seed"
+  # end
+
+  before :restart, :setup_db do
+    on roles(:web) do
+      within release_path do
+        execute :rake, 'db:drop'
+        execute :rake, 'db:create'
+        execute :rake, 'db:migrate'
+        execute :rake, 'db:seed'
+        execute :rake, 'assets:clobber'
+        execute :rake, 'assets:precompile'
+      end
+    end
   end
 
   after :restart, :clear_cache do
@@ -51,5 +63,5 @@ namespace :deploy do
       # end
     end
   end
-
 end
+

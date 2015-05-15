@@ -14,23 +14,23 @@
 ActiveRecord::Schema.define(version: 20150514182701) do
 
   create_table "contact_form_entries", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name"
-    t.string   "email"
-    t.string   "subject"
-    t.text     "message"
-    t.string   "ip_address"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.string   "subject",    limit: 255
+    t.text     "message",    limit: 65535
+    t.string   "ip_address", limit: 255
   end
 
   create_table "pages", force: :cascade do |t|
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.string   "title"
-    t.text     "content"
-    t.string   "page_type"
-    t.string   "content_type"
-    t.string   "url_slug"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "title",        limit: 255
+    t.text     "content",      limit: 65535
+    t.string   "page_type",    limit: 255
+    t.string   "content_type", limit: 255
+    t.string   "url_slug",     limit: 255
   end
 
 end

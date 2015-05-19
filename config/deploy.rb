@@ -60,7 +60,6 @@ namespace :deploy do
           execute :rake, 'db:create'
           execute :rake, 'db:migrate'
           execute :rake, 'db:seed'
-          execute :rake, 'assets:clobber'
           execute :rake, 'assets:precompile'
         end
       end

@@ -54,13 +54,15 @@ namespace :deploy do
   before :restart, :setup_db do
     on roles(:web) do
       within release_path do
-        execute :bundle, :install
-        execute :rake, 'db:drop'
-        execute :rake, 'db:create'
-        execute :rake, 'db:migrate'
-        execute :rake, 'db:seed'
-        execute :rake, 'assets:clobber'
-        execute :rake, 'assets:precompile'
+        with rails_env: fetch(:rails_env) do
+          execute :bundle, :install
+          execute :rake, 'db:drop'
+          execute :rake, 'db:create'
+          execute :rake, 'db:migrate'
+          execute :rake, 'db:seed'
+          execute :rake, 'assets:clobber'
+          execute :rake, 'assets:precompile'
+        end
       end
     end
   end

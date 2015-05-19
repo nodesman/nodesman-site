@@ -12,17 +12,11 @@
 <% end %>
 
 <%= render "header" %>
-
-
 <div class="wrapper">
   <div class="article-page-container nonhome">
     <h1><%= @article.title %></h1>
     <div class="content">
-      <% if @article.is_markdown? %>
-          <%= markdown(@article.content) %>
-      <% else %>
-          <%= @article.content.html_safe %>
-      <% end %>
+          <%= raw @article.content %>
     </div>
   </div>
 

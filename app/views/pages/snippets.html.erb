@@ -1,0 +1,7 @@
+<div class="snippets">
+  <ul>
+  <% @snippets.each do |snippet| %>
+    <li><a href="<%= snippet_url(snippet.id) %>"><%=snippet.title %></a></li>
+  <% end %>
+  </ul>
+</div>

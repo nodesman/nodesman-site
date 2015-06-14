@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/angularfeed', :controller => "pages", :action => "angular_feed", :as => "angular_feed"
   get '/wp', :controller => "pages", :action => "wpr", :as => "wpr"
   get '/contact', :controller => "pages", :action => "contact", :as => "contact"
+  get '/snippets', :controller => "pages", :action => "snippets"
+  get '/snippet/:slug', :controller => "pages", :action => "snippet", :as => "snippet"
 
   post '/contact', :controller => "pages", :action => "contact_post"
 

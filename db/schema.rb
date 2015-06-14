@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514182701) do
+ActiveRecord::Schema.define(version: 20150614163451) do
+
+  create_table "articles", force: :cascade do |t|
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "title",      limit: 255
+    t.text     "content",    limit: 65535
+    t.boolean  "show_date",  limit: 1,     default: false
+    t.string   "url_slug",   limit: 255
+  end
 
   create_table "contact_form_entries", force: :cascade do |t|
     t.datetime "created_at",               null: false

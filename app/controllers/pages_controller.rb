@@ -1,14 +1,17 @@
 class PagesController < ApplicationController
   def home
-    @articles = Page.limit(3).order(created_at: :desc).where :page_type => :article
+    @articles = Article.limit(3).order(created_at: :desc)
   end
 
   def articles
-    @articles = Page.order(created_at: :desc).where :page_type => :article
+    @articles = Article.order(created_at: :desc)
     render :layout=> "section"
   end
 
   def not_found
+  end
+
+  def snippets
   end
 
   def angular_feed

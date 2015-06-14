@@ -1,5 +1,4 @@
 class Page < ActiveRecord::Base
-  self.inheritance_column = :page_type
   @page_types = {
       :article => "Article",
       :section_page => "Section Page"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701031111) do
+ActiveRecord::Schema.define(version: 20150701170258) do
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at",                               null: false
@@ -31,16 +31,6 @@ ActiveRecord::Schema.define(version: 20150701031111) do
     t.string   "subject",    limit: 255
     t.text     "message",    limit: 65535
     t.string   "ip_address", limit: 255
-  end
-
-  create_table "pages", force: :cascade do |t|
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "title",        limit: 255
-    t.text     "content",      limit: 65535
-    t.string   "page_type",    limit: 255
-    t.string   "content_type", limit: 255
-    t.string   "url_slug",     limit: 255
   end
 
   create_table "snippets", force: :cascade do |t|

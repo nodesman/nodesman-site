@@ -1,0 +1,73 @@
+<%= content_for :script_head do %>
+    <%= javascript_include_tag "admin/admin" %>
+
+<% end %>
+
+<div class="content-header">
+  <div class="header-section">
+    <h1>
+      <i class="gi gi-notes_2"></i>Manage Pages<br><small>Master record of settings for all pages. </small>
+    </h1>
+  </div>
+</div>
+
+<div class="block">
+  <!-- Basic Form Elements Title -->
+  <div class="block-title pages-list-title">
+
+    <h2><strong>All Pages</strong></h2>
+    <%= link_to '/admin/articles/new', :class => 'btn pull-right btn-sm btn-success' do %>
+        <i class="fa fa-plus"></i> New</button>
+    <% end %>
+  </div>
+
+  <div class="table-reponsive">
+    <table id="general-table" class="table table-striped table-vcenter">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Published Date</th>
+        <th>Slug</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% if @articles.length.equal?(0) %>
+
+          <tr>
+            <td colspan="3" align="center">No articles</td>
+          </tr>
+
+      <% end %>
+
+      <% @articles.each do | article | %>
+          <tr>
+            <td>
+              <%= article.id %>
+            </td>
+            <td>
+              <%= link_to "/admin/articles/#{article.id}/edit" do %>
+                  <%= article.title %>
+              <% end %>
+            </td>
+            <td>
+              <%= article.created_at.strftime('%F %T') %>
+            </td>
+            <td><%= article.url_slug %></td>
+            <td>
+              <%= form_for [:admin, article], :html => { :method => :delete, :remote => true } do |d| %>
+                  <%= hidden_field :page, :id, :value => article.id %>
+                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                  <%= d.submit "Delete", :onclick => "return confirm('Are you sure you want to delete this page?');", :class => 'btn btn-warning' do %>
+                      Delete
+                  <% end %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+
+    </table>
+  </div>
+</div>

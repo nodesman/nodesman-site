@@ -1,0 +1,3 @@
+class PagesAdminController < AdminController
+
+end

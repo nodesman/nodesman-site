@@ -1,0 +1,17 @@
+<%= content_for :script_head do %>
+    <%= render 'article_edit_js_assets_inclusion' %>
+<% end %>
+
+<%= content_for :style do %>
+    <%= stylesheet_link_tag "lib/epiceditor/base/epiceditor" %>
+<% end %>
+
+
+<script>
+  var editor_assets = {
+      base: '<%= asset_path 'lib/epiceditor/base/epiceditor.css' %>'
+  };
+</script>
+<div class="articles-edit">
+    <%= render "form" %>
+</div>

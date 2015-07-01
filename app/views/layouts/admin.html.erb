@@ -6,20 +6,19 @@
   <%= yield :script_head %>
 </head>
 
-<body>
+<body ng-app="Nodesman">
 
 <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
-
   <%= render "admin_sidebar" %>
-
   <div id="main-container">
+
     <header class="navbar navbar-default">
     </header>
+
     <div id="page-content">
       <%= yield %>
     </div>
     <footer class="clearfix">
-
     </footer>
   </div>
 </div>

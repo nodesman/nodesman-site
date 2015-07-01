@@ -1,0 +1,13 @@
+var nodesman = angular.module('Nodesman', ['multi-transclude']),
+        bodyElement = document.body;
+
+nodesman.directive('testDirective', function () {
+    return {
+        templateUrl: '<%= asset_path 'admin-page-header.html' %>',
+        transclude: true,
+        link: function (scope) {
+            console.log('test');
+        }
+    }
+});
+

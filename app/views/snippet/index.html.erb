@@ -1,0 +1,7 @@
+<div class="snippets-list">
+  <ul>
+      <% @snippets.each do |snippet| %>
+        <li><a href="<% link_to '/snippet/' + snippet.slug %>"><%= snippet.title %></a></li>
+      <% end %>
+  </ul>
+</div>

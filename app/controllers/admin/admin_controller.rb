@@ -1,8 +1,5 @@
-class AdminController < ApplicationController
-
+class AdminController < AdminPageController
   attr_writer :title, :content, :page_type, :content_type, :url_slug
-  layout "admin"
-
   def home
     render 'admin-home'
   end

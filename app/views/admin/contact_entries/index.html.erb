@@ -1,0 +1,59 @@
+
+<%= content_for :script_head do %>
+    <%= javascript_include_tag "admin/admin" %>
+
+<% end %>
+
+<div class="content-header">
+  <div class="header-section">
+    <h1>
+      <i class="gi gi-notes_2"></i>Manage Contact Form Entries<br>
+    </h1>
+  </div>
+</div>
+
+<div class="block">
+  <!-- Basic Form Elements Title -->
+  <div class="block-title pages-list-title">
+
+    <h2><strong>Contact Form Entries</strong></h2>
+    <%= link_to '/admin/articles/new', :class => 'btn pull-right btn-sm btn-success' do %>
+        <i class="fa fa-plus"></i> New</button>
+    <% end %>
+  </div>
+
+  <div class="table-reponsive">
+    <table id="general-table" class="table table-striped table-vcenter">
+      <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Date</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% if @entries.length.equal?(0)  %>
+
+          <tr>
+            <td colspan="3" align="center">No entries</td>
+          </tr>
+
+      <% end %>
+
+      <% @entries.each do |entry| %>
+          <tr>
+            <td valign="top" style="vertical-align: top;">
+              <a href="<%= admin_contact_entry_path(entry) %>"><%= entry.subject %></a>
+            </td>
+            <td valign="top">
+              <%= time_ago_in_words(entry.created_at) %> <br />
+              <small style="font-size: 10px"><%= entry.created_at.strftime('%F %T') %></small>
+            </td>
+          </tr>
+      <% end %>
+
+      </tbody>
+
+    </table>
+  </div>
+</div>

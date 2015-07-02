@@ -20,13 +20,23 @@ class Admin::ArticlesController < AdminPageController
   def update
     @article = params.require(:article).permit!
     process_slug @article
+    compile_markdown @article
     Article.update params[:id], @article
     redirect_to edit_admin_article_path(params[:id])
+  end
+
+
+  def compile_markdown(article)
+    puts "Article content:"
+    puts article.inspect
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    article[:html] = markdown.render(article[:content])
   end
 
   def create
     @article = params.require(:article).permit!
     process_slug @article
+    compile_markdown @article
     Article.create @article
     redirect_to admin_articles_url
   end

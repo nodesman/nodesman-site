@@ -5,7 +5,6 @@
 }
 
 div.essays {
-  max-width: 960px;
 
   margin: 10rem auto 5rem auto;
   h1.latest {
@@ -64,6 +63,26 @@ div.essays {
         font-size: 1.5rem;
 
 
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  div.essays {
+    blockquote {
+      border: 0;
+    }
+    .article-list {
+      .fa.fa-terminal {
+        display: none;
+      }
+      a {
+        display: block;
+        text-align: center;
+        margin: 30px 0;
+        font-size: 1.8rem;
+        line-height: 1.8em;
       }
     }
   }

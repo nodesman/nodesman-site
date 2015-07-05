@@ -7,7 +7,7 @@ class Admin::SnippetsController < AdminPageController
   end
 
   def create
-    @snippet = params.require(:snippets).permit!
+    @snippet = params.require(:snippet).permit!
     process_markdown @snippet
     Snippet.create @snippet
     redirect_to admin_snippets_url
@@ -23,7 +23,7 @@ class Admin::SnippetsController < AdminPageController
   end
 
   def process_markdown(snippet)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
     snippet[:html] = markdown.render(snippet[:content])
   end
 

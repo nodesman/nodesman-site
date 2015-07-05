@@ -1,7 +1,10 @@
 @font: "proxima-nova-alt", Arial;
+@footerHeight: 410px;
+
 html, body {
   margin: 0;
-  min-height: 100%;
+  height: 100%;
+  overflow: auto;
   font-family: @font;
 }
 
@@ -16,6 +19,6 @@ html, body {
 @import (less) "styles/bootstrap.css";
 
 @import "styles/fontawesome";
-@import (less) "styles/main.css";
+@import (less) "styles/main";
 @import (less) "styles/responsive.css";
 @import "css/common";

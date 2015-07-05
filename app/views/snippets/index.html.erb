@@ -1,0 +1,28 @@
+<%= content_for :style do %>
+    <%= stylesheet_link_tag "snippet" %>
+<% end %>
+<%= content_for :title do %>
+    Snippets
+<% end %>
+<%= content_for :body_class do %>
+    snippets-list
+<% end %>
+
+<%= content_for :post_content do %>
+    <%= javascript_include_tag "articles.js" %>
+    <%= render "typekit" %>
+<% end %>
+
+<div class="wrapper">
+  <%= render "header" %>
+  <h1>RECENT SNIPPETS</h1>
+  <div class="list-body">
+  <ul>
+    <% @snippets.each do |snippet| %>
+        <li><a href="/snippet/<%= snippet.slug %>"><%= snippet.title %></a></li>
+    <% end %>
+  </ul>
+  </div>
+</div>
+
+<%= render "footer" %>

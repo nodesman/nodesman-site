@@ -6,14 +6,15 @@ Rails.application.routes.draw do
   get '/angularfeed', :controller => "pages", :action => "angular_feed", :as => "angular_feed"
   get '/wp', :controller => "pages", :action => "wpr", :as => "wpr"
   get '/contact', :controller => "pages", :action => "contact", :as => "contact"
-  get '/snippets', :controller => "snippet", :action => "index", :as => "snippets"
-  get '/snippet/:slug', :controller => "pages", :action => "snippet", :as => "snippet"
   post '/contact', :controller => "pages", :action => "contact_post"
   get '/contact_done', :controller => "pages", :action => "contact_form_filled", :as => "contact_form_filled"
   get '404', :to => "pages#not_found"
 
+  resources :snippets, :only => [:index]
+  get '/snippet/:slug', :controller => "snippets", :action => "show", :as => "snippet_view"
+
   if Rails.env.development?
-    get '/admin', to: redirect('/admin/article')
+    get '/admin', to: redirect('/admin/articles')
     namespace :admin do
       resources :articles, :except => [:show]
       resources :snippets, :except => [:show]

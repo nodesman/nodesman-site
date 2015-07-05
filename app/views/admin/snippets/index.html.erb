@@ -1,1 +1,71 @@
-Snippets index goes here.
+<div class="content-header">
+  <div class="header-section">
+    <h1>
+      <i class="gi gi-notes_2"></i>Manage Snippets<br><small>Master record of all snippets</small>
+    </h1>
+  </div>
+</div>
+
+<div class="block">
+  <div class="block-title pages-list-title">
+    <h2><strong>All Snippets</strong></h2>
+    <%= link_to new_admin_snippet_url, :class => 'btn pull-right btn-sm btn-success' do %>
+        <i class="fa fa-plus"></i> New</button>
+    <% end %>
+  </div>
+
+  <div class="table-reponsive">
+    <table id="general-table" class="table table-striped table-vcenter">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Published Date</th>
+        <th>Updated Date</th>
+        <th>Slug</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% if @snippets.length.equal?(0) %>
+
+          <tr>
+            <td colspan="5" align="center">No snippets</td>
+          </tr>
+
+      <% end %>
+
+      <% @snippets.each do | snippet | %>
+          <tr>
+            <td>
+              <%= snippet.id %>
+            </td>
+            <td>
+              <%= link_to edit_admin_snippet_url(snippet.id) do %>
+                  <%= snippet.title %>
+              <% end %>
+              <p><small style="font-size: 10px;"><%= snippet.created_at.strftime('%F %T') %></small></p>
+            </td>
+            <td>
+              <%= time_ago_in_words(snippet.created_at) %>
+            </td>
+            <td>
+              <%= time_ago_in_words(snippet.updated_at) %>
+            </td>
+            <td><%= snippet.slug %></td>
+            <td>
+              <%= form_for [:admin, snippet], :html => { :method => :delete, :remote => true } do |d| %>
+                  <%= hidden_field :page, :id, :value => snippet.id %>
+                  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+                  <%= d.submit "Delete", :onclick => "return confirm('Are you sure you want to delete this page?');", :class => 'btn btn-warning' do %>
+                      Delete
+                  <% end %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+
+    </table>
+  </div>
+</div>

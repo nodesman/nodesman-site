@@ -1,0 +1,14 @@
+<%= content_for :script_head do %>
+    <%= javascript_include_tag "admin/admin" %>
+<% end %>
+
+<div class="new-snippet">
+  <div class="content-header">
+    <div class="header-section">
+      <h1>
+        <i class="gi gi-notes_2"></i>Edit Snippet<br>
+      </h1>
+    </div>
+  </div>
+  <%= render "form" %>
+</div>

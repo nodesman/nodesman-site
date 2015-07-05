@@ -1,0 +1,61 @@
+@import "base_includes";
+@import "styles/blog";
+
+.snippet-view {
+  height: 100%;
+  overflow: auto;
+  flex-flow: column;
+
+  .wrapper {
+    h2.title {
+      margin: 50px;
+      text-align: center;
+    }
+    width: 100%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+  }
+  > div, > section {
+    flex: 1;
+  }
+}
+
+body.snippets-list {
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 100%;
+  height: calc(100% - @footerHeight);
+  h1 {
+    text-align: center;
+  }
+
+  .wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .list-body {
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          color: #006dcc;
+          font-size: 1.5rem;
+          text-align: center;
+          display: block;
+          font-weight: normal;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
+
+}

@@ -4,10 +4,12 @@
 //= require ../lib/adminjs/plugins
 //= require ../lib/adminjs/app
 //= require ../lib/adminjs/pages/index
+
 //= require ../lib/angular
 //= require ../lib/multi-transclude
 //= require ../lib/marked.min
 //= require ../Nodesman
+//= require ../lib/epiceditor
 //= require directives/MarkdownEditorDirective
 
 $(function() {

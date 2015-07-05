@@ -27,8 +27,6 @@ class Admin::ArticlesController < AdminPageController
 
 
   def compile_markdown(article)
-    puts "Article content:"
-    puts article.inspect
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     article[:html] = markdown.render(article[:content])
   end

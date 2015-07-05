@@ -1,7 +1,7 @@
 <div id="sidebar">
   <div class="sidebar-scroll">
     <div class="sidebar-content">
-      <a href="index.html" class="sidebar-brand">
+      <a href="<%= admin_articles_path %>" class="sidebar-brand">
         <i class="gi gi-flash"></i><strong>Admin</strong>UI
       </a>
       <div class="sidebar-section sidebar-user clearfix">
@@ -15,7 +15,7 @@
       </div>
       <ul class="sidebar-nav">
         <li>
-          <%= link_to "/nestea" do %>
+          <%= link_to admin_articles_path do %>
             <i class="gi gi-stopwatch sidebar-nav-icon"></i>Dashboard
           <% end %>
         </li>
@@ -24,8 +24,13 @@
           <span class="sidebar-header-title">Content</span>
         </li>
         <li>
-          <%= link_to "/admin/articles" do %>
+          <%= link_to admin_articles_url do %>
             <i class="gi gi-show_big_thumbnails sidebar-nav-icon"></i>Articles
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_snippets_url do %>
+              <i class="gi gi-show_big_thumbnails sidebar-nav-icon"></i>Snippets
           <% end %>
         </li>
         <li class="sidebar-header">
@@ -33,7 +38,7 @@
           <span class="sidebar-header-title">Other</span>
         </li>
         <li>
-          <%= link_to "/admin/contact_entries" do %>
+          <%= link_to admin_contact_entries_url do %>
               <i class="gi gi-show_big_thumbnails sidebar-nav-icon"></i>Contact Entries
           <% end %>
         </li>

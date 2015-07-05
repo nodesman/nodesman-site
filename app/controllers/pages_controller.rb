@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @articles = Article.limit(3).order(created_at: :desc)
+    render "home", :layout => 'home'
   end
 
   def articles

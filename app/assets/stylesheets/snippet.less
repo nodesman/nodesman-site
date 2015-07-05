@@ -26,7 +26,6 @@ body.snippets-list {
   margin: 0 auto;
   margin-top: 70px;
   width: 100%;
-  height: calc(100% - @footerHeight);
   h1 {
     text-align: center;
   }
@@ -38,6 +37,7 @@ body.snippets-list {
     padding: 30px;
     h1 {
       margin-bottom: 30px;
+      font-family: @font;
     }
   }
 
@@ -48,8 +48,9 @@ body.snippets-list {
       li {
         a {
           color: #006dcc;
-          font-size: 1.5rem;
+          font-size: 2rem;
           text-align: center;
+          font-family: @font;
           display: block;
           font-weight: normal;
           line-height: 3rem;

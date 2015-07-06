@@ -23,7 +23,7 @@ class Admin::SnippetsController < AdminPageController
   end
 
   def process_markdown(snippet)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true, fenced_code_blocks: true)
     snippet[:html] = markdown.render(snippet[:content])
   end
 

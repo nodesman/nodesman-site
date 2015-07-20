@@ -1,7 +1,7 @@
 class SnippetsController < ApplicationController
   layout "articles"
   def index
-    @snippets = Snippet.order(:created_at).all
+    @snippets = Snippet.order(created_at: :desc).all
   end
 
   def show

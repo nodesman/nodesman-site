@@ -1,7 +1,10 @@
 <% content_for :post_content do %>
     <%= javascript_include_tag 'home' %>
     <script src="http://use.typekit.net/iku8pjx.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <script>try {
+        Typekit.load();
+    } catch (e) {
+    }</script>
 <% end %>
 
 <% content_for :title do %>
@@ -62,25 +65,28 @@
 </div>
 
 <section id="intro">
-  <div class="container valign">
-    <div class="row">
-      <div class="col-md-12">
-        <%= image_tag "me.png", :class => "img-responsive center-block introLogo", :alt => "Raj" %>
-      </div>
-      <div class="col-md-12 text-center">
-        <h1 class="main-title-heading">FRONT-END ENGINEER</h1>
-      </div>
+  <div class="black-overlay">
+    <div class="container valign">
 
-      <div class="col-md-12 text-center">
-        <%= image_tag "separatorWhite.png", :class => "img-responsive center-block separator", :alt => "separator" %>
-      </div>
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <p>
-          I'm Raj. I create powerful web experiences.
-        </p>
+      <div class="row">
+        <div class="col-md-12">
+          <%= image_tag "me.png", :class => "img-responsive center-block introLogo", :alt => "Raj" %>
+        </div>
+        <div class="col-md-12 text-center">
+          <h1 class="main-title-heading">FRONT-END ENGINEER</h1>
+        </div>
+
+        <div class="col-md-12 text-center">
+          <%= image_tag "separatorWhite.png", :class => "img-responsive center-block separator", :alt => "separator" %>
+        </div>
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <p>
+            I'm Raj. I create powerful web experiences.
+          </p>
+
+        </div>
 
       </div>
-
     </div>
   </div>
 </section>
@@ -111,8 +117,10 @@
               <%= image_tag "portfolio/angularfeed-excerpt.png", :class => "galleryImage", :alt => "Thumbnail" %>
               <div class="caption-heading">
                 <h5>AngularFeed</h5>
-                <p>AngularJs based RSS feed reader that works entirely off the browser. Uses Rails 4 for proxying requests for the feed content. </p>
-                <a class="btn btn-default btn-black" id="trigger-overlay"  href="<%= angular_feed_url %>">More</a>
+
+                <p>AngularJs based RSS feed reader that works entirely off the browser. Uses Rails 4 for proxying
+                  requests for the feed content. </p>
+                <a class="btn btn-default btn-black" id="trigger-overlay" href="<%= angular_feed_url %>">More</a>
               </div>
             </div>
           </div>
@@ -121,8 +129,9 @@
               <%= image_tag "portfolio/wpa-excerpt.png", :class => "galeryImage", :alt => "Thumbnail" %>
               <div class="caption-heading">
                 <h5>WP Autoresponder</h5>
+
                 <p>A complete Email Marketing application for WordPress that does everything</p>
-                <a class="btn btn-default btn-black" id="trigger-overlay"  href="<%= wpr_url %>">More</a>
+                <a class="btn btn-default btn-black" id="trigger-overlay" href="<%= wpr_url %>">More</a>
               </div>
             </div>
           </div>
@@ -147,9 +156,9 @@
                   <h2><%= article.title %></h2>
               <% end %>
               <div>
-                 <%
-                 content_truncate_words =  article.content.truncate_words 30
-                 %>
+                <%
+                   content_truncate_words = article.content.truncate_words 30
+                %>
                 <%= content_truncate_words.html_safe %>
               </div>
             </div>
@@ -162,5 +171,5 @@
 <%= render "footer" %>
 
 <script>
- var hero_url = '<%= image_url "pictures/home-abovefold.jpg" %>';
+    var hero_url = '<%= image_url "pictures/home-abovefold.jpg" %>';
 </script>

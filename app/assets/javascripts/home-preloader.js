@@ -1,17 +1,13 @@
 (function () {
-  var support = {
-    animations: Modernizr.cssanimations
-  };
   var container = document.getElementById('bigWrapper');
   var header = container.querySelector('.ip-header');
   var loader = new PathLoader(document.getElementById('ip-loader-circle'));
-  var animEndEventNames = {
+  var animationEndEvents = {
     'WebkitAnimation': 'webkitAnimationEnd',
     'OAnimation': 'oAnimationEnd',
     'msAnimation': 'MSAnimationEnd',
     'animation': 'animationend'
   };
-  var animEndEventName = animEndEventNames[Modernizr.prefixed('animation')];
 
   var interval;
 
@@ -39,5 +35,6 @@
       classie.add(container, 'layout-switch');
     }, 1000);
   }
+
   init();
 })();

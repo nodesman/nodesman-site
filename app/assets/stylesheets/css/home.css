@@ -9,3 +9,12 @@
 .home .main-title-heading {
   text-shadow: 0 1px 1px #000;
 }
+
+.above-fold-image-loader {
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 0;
+    left: 0;
+    overflow: hidden;
+}

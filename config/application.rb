@@ -18,7 +18,7 @@ module NodesmanSite
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.precompile = %w( *.css *.js *.png *.jpg *.gif *.html *.woff *.eot *.ttf *.svg )
+    config.assets.precompile = %w( articles.less contact.less portfolio.less style.less snippet.less *.js *.png *.jpg *.gif *.html *.woff *.eot *.ttf *.svg  )
     config.assets.paths << "#{Rails.root}/app/assets/views"
     config.app_generators.stylesheet_engine :less
     # Do not swallow errors in after_commit/after_rollback callbacks.

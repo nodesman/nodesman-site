@@ -12,11 +12,11 @@ html, body {
 }
 
 @import "css/framework.scss";
-@import "css/normalize.css";
-@import "styles/bootstrap.css";
+@import "lib/normalize.scss";
+@import "styles/bootstrap.scss";
 
 @import "styles/fontawesome";
 @import "styles/main";
 @import "mixins";
-@import "styles/responsive.css";
+@import "styles/responsive";
 @import "css/common";

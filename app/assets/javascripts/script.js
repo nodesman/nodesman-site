@@ -247,8 +247,8 @@
       }), c.getElementsByTagName = ib(function (a) {
         return a.appendChild(e.createComment("")), !a.getElementsByTagName("*").length
       }), c.getElementsByClassName = $.test(e.getElementsByClassName) && ib(function (a) {
-        return a.innerHTML = "<div class='a'></div><div class='a i'></div>", a.firstChild.className = "i", 2 === a.getElementsByClassName("i").length
-      }), c.getById = ib(function (a) {
+          return a.innerHTML = "<div class='a'></div><div class='a i'></div>", a.firstChild.className = "i", 2 === a.getElementsByClassName("i").length
+        }), c.getById = ib(function (a) {
         return o.appendChild(a).id = u, !e.getElementsByName || !e.getElementsByName(u).length
       }), c.getById ? (d.find.ID = function (a, b) {
         if (typeof b.getElementById !== C && p) {
@@ -276,8 +276,8 @@
         }
         return f
       }, d.find.CLASS = c.getElementsByClassName && function (a, b) {
-        return typeof b.getElementsByClassName !== C && p ? b.getElementsByClassName(a) : void 0
-      }, r = [], q = [], (c.qsa = $.test(e.querySelectorAll)) && (ib(function (a) {
+          return typeof b.getElementsByClassName !== C && p ? b.getElementsByClassName(a) : void 0
+        }, r = [], q = [], (c.qsa = $.test(e.querySelectorAll)) && (ib(function (a) {
         a.innerHTML = "<select msallowclip=''><option selected=''></option></select>", a.querySelectorAll("[msallowclip^='']").length && q.push("[*^$]=" + M + "*(?:''|\"\")"), a.querySelectorAll("[selected]").length || q.push("\\[" + M + "*(?:value|" + L + ")"), a.querySelectorAll(":checked").length || q.push(":checked")
       }), ib(function (a) {
         var b = e.createElement("input");
@@ -2321,8 +2321,8 @@
     }).done(function (a) {
       f = arguments, g.html(d ? n("<div>").append(n.parseHTML(a)).find(d) : a)
     }).complete(c && function (a, b) {
-      g.each(c, f || [a.responseText, b, a])
-    }), this
+        g.each(c, f || [a.responseText, b, a])
+      }), this
   }, n.expr.filters.animated = function (a) {
     return n.grep(n.timers, function (b) {
       return a === b.elem
@@ -3082,8 +3082,8 @@
     b.cache || (b.cache = {}, b.createElem = a.createElement, b.createFrag = a.createDocumentFragment, b.frag = b.createFrag()), a.createElement = function (c) {
       return t.shivMethods ? g(c, a, b) : b.createElem(c)
     }, a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + d().join().replace(/[\w\-:]+/g, function (a) {
-      return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
-    }) + ");return n}")(t, b.frag)
+        return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
+      }) + ");return n}")(t, b.frag)
   }
 
   function j(a) {
@@ -3097,10 +3097,10 @@
     try {
       var a = b.createElement("a");
       a.innerHTML = "<xyz></xyz>", k = "hidden"in a, l = 1 == a.childNodes.length || function () {
-        b.createElement("a");
-        var a = b.createDocumentFragment();
-        return "undefined" == typeof a.cloneNode || "undefined" == typeof a.createDocumentFragment || "undefined" == typeof a.createElement
-      }()
+          b.createElement("a");
+          var a = b.createDocumentFragment();
+          return "undefined" == typeof a.cloneNode || "undefined" == typeof a.createDocumentFragment || "undefined" == typeof a.createElement
+        }()
     } catch (c) {
       k = !0, l = !0
     }
@@ -3127,14 +3127,14 @@
 !function (a) {
   "use strict";
   a.matchMedia = a.matchMedia || function (a) {
-    var b, c = a.documentElement, d = c.firstElementChild || c.firstChild, e = a.createElement("body"), f = a.createElement("div");
-    return f.id = "mq-test-1", f.style.cssText = "position:absolute;top:-100em", e.style.background = "none", e.appendChild(f), function (a) {
-      return f.innerHTML = '&shy;<style media="' + a + '"> #mq-test-1 { width: 42px; }</style>', c.insertBefore(e, d), b = 42 === f.offsetWidth, c.removeChild(e), {
-        matches: b,
-        media: a
+      var b, c = a.documentElement, d = c.firstElementChild || c.firstChild, e = a.createElement("body"), f = a.createElement("div");
+      return f.id = "mq-test-1", f.style.cssText = "position:absolute;top:-100em", e.style.background = "none", e.appendChild(f), function (a) {
+        return f.innerHTML = '&shy;<style media="' + a + '"> #mq-test-1 { width: 42px; }</style>', c.insertBefore(e, d), b = 42 === f.offsetWidth, c.removeChild(e), {
+          matches: b,
+          media: a
+        }
       }
-    }
-  }(a.document)
+    }(a.document)
 }(this), function (a) {
   "use strict";
   function b() {
@@ -3334,8 +3334,8 @@ window.Modernizr = function (a, b, c) {
       b.cache || (b.cache = {}, b.createElem = a.createElement, b.createFrag = a.createDocumentFragment, b.frag = b.createFrag()), a.createElement = function (c) {
         return s.shivMethods ? o(c, a, b) : b.createElem(c)
       }, a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + m().join().replace(/[\w\-]+/g, function (a) {
-        return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
-      }) + ");return n}")(s, b.frag)
+          return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
+        }) + ");return n}")(s, b.frag)
     }
 
     function r(a) {
@@ -3349,10 +3349,10 @@ window.Modernizr = function (a, b, c) {
       try {
         var a = b.createElement("a");
         a.innerHTML = "<xyz></xyz>", g = "hidden"in a, k = a.childNodes.length == 1 || function () {
-          b.createElement("a");
-          var a = b.createDocumentFragment();
-          return typeof a.cloneNode == "undefined" || typeof a.createDocumentFragment == "undefined" || typeof a.createElement == "undefined"
-        }()
+            b.createElement("a");
+            var a = b.createDocumentFragment();
+            return typeof a.cloneNode == "undefined" || typeof a.createDocumentFragment == "undefined" || typeof a.createElement == "undefined"
+          }()
       } catch (c) {
         g = !0, k = !0
       }
@@ -4156,17 +4156,17 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
   }, a(document).on("click.bs.tab.data-api", '[data-toggle="tab"], [data-toggle="pill"]', function (c) {
     c.preventDefault(), b.call(a(this), "show")
   })
-}(jQuery), +function (a) {
+}(jQuery), +function ($) {
   "use strict";
   function b(b) {
     return this.each(function () {
-      var d = a(this), e = d.data("bs.affix"), f = "object" == typeof b && b;
+      var d = $(this), e = d.data("bs.affix"), f = "object" == typeof b && b;
       e || d.data("bs.affix", e = new c(this, f)), "string" == typeof b && e[b]()
     })
   }
 
   var c = function (b, d) {
-    this.options = a.extend({}, c.DEFAULTS, d), this.$target = a(this.options.target).on("scroll.bs.affix.data-api", a.proxy(this.checkPosition, this)).on("click.bs.affix.data-api", a.proxy(this.checkPositionWithEventLoop, this)), this.$element = a(b), this.affixed = this.unpin = this.pinnedOffset = null, this.checkPosition()
+    this.options = $.extend({}, c.DEFAULTS, d), this.$target = $(this.options.target).on("scroll.bs.affix.data-api", $.proxy(this.checkPosition, this)).on("click.bs.affix.data-api", $.proxy(this.checkPositionWithEventLoop, this)), this.$element = $(b), this.affixed = this.unpin = this.pinnedOffset = null, this.checkPosition()
   };
   c.VERSION = "3.2.0", c.RESET = "affix affix-top affix-bottom", c.DEFAULTS = {
     offset: 0,
@@ -4177,25 +4177,25 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
     var a = this.$target.scrollTop(), b = this.$element.offset();
     return this.pinnedOffset = b.top - a
   }, c.prototype.checkPositionWithEventLoop = function () {
-    setTimeout(a.proxy(this.checkPosition, this), 1)
+    setTimeout($.proxy(this.checkPosition, this), 1)
   }, c.prototype.checkPosition = function () {
     if (this.$element.is(":visible")) {
-      var b = a(document).height(), d = this.$target.scrollTop(), e = this.$element.offset(), f = this.options.offset, g = f.top, h = f.bottom;
+      var b = $(document).height(), d = this.$target.scrollTop(), e = this.$element.offset(), f = this.options.offset, g = f.top, h = f.bottom;
       "object" != typeof f && (h = g = f), "function" == typeof g && (g = f.top(this.$element)), "function" == typeof h && (h = f.bottom(this.$element));
       var i = null != this.unpin && d + this.unpin <= e.top ? !1 : null != h && e.top + this.$element.height() >= b - h ? "bottom" : null != g && g >= d ? "top" : !1;
       if (this.affixed !== i) {
         null != this.unpin && this.$element.css("top", "");
-        var j = "affix" + (i ? "-" + i : ""), k = a.Event(j + ".bs.affix");
-        this.$element.trigger(k), k.isDefaultPrevented() || (this.affixed = i, this.unpin = "bottom" == i ? this.getPinnedOffset() : null, this.$element.removeClass(c.RESET).addClass(j).trigger(a.Event(j.replace("affix", "affixed"))), "bottom" == i && this.$element.offset({top: b - this.$element.height() - h}))
+        var j = "affix" + (i ? "-" + i : ""), k = $.Event(j + ".bs.affix");
+        this.$element.trigger(k), k.isDefaultPrevented() || (this.affixed = i, this.unpin = "bottom" == i ? this.getPinnedOffset() : null, this.$element.removeClass(c.RESET).addClass(j).trigger($.Event(j.replace("affix", "affixed"))), "bottom" == i && this.$element.offset({top: b - this.$element.height() - h}))
       }
     }
   };
-  var d = a.fn.affix;
-  a.fn.affix = b, a.fn.affix.Constructor = c, a.fn.affix.noConflict = function () {
-    return a.fn.affix = d, this
-  }, a(window).on("load", function () {
-    a('[data-spy="affix"]').each(function () {
-      var c = a(this), d = c.data();
+  var d = $.fn.affix;
+  $.fn.affix = b, $.fn.affix.Constructor = c, $.fn.affix.noConflict = function () {
+    return $.fn.affix = d, this
+  }, $(window).on("load", function () {
+    $('[data-spy="affix"]').each(function () {
+      var c = $(this), d = c.data();
       d.offset = d.offset || {}, d.offsetBottom && (d.offset.bottom = d.offsetBottom), d.offsetTop && (d.offset.top = d.offsetTop), b.call(c, d)
     })
   })
@@ -4775,7 +4775,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       this.max()
     }, calculateWidth: function () {
       this.itemWidth = Math.round(this.$elem.width() /
-      this.options.items)
+        this.options.items)
     }, max: function () {
       var a = -1 * (this.itemsAmount * this.itemWidth - this.options.items * this.itemWidth);
       this.options.items > this.itemsAmount ? this.maximumPixels = a = this.maximumItem = 0 : (this.maximumItem = this.itemsAmount - this.options.items, this.maximumPixels = a);
@@ -5368,8 +5368,8 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       } : a.noop, this._setScrollTop = "function" == typeof f ? function (a) {
         f(b.$scrollElement, a)
       } : a.noop, this._setPosition = d.setPosition || function (a, c, e, f, g) {
-        b.options.horizontalScrolling && d.setLeft(a, c, e), b.options.verticalScrolling && d.setTop(a, f, g)
-      }
+          b.options.horizontalScrolling && d.setLeft(a, c, e), b.options.verticalScrolling && d.setTop(a, f, g)
+        }
     }, _handleWindowLoadAndResize: function () {
       var c = this, d = a(b);
       c.options.responsive && d.bind("load." + this.name, function () {

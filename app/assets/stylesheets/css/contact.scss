@@ -1,4 +1,4 @@
-@import (reference) "../style";
+
 .contact {
 
   max-width: 1280rem;
@@ -39,7 +39,7 @@
         textarea {
           width: 100%;
           height: 30rem;
-          font-family: @font;
+          font-family: $font;
           border: 0.1rem solid #888;
           font-size: 1.6rem;
           padding: 1rem;

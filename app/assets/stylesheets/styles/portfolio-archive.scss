@@ -1,8 +1,7 @@
-@import (reference) "../style.less";
-
 #portfolio .portfolioFilters {
   height: 8rem;
 }
+
 .portfolio-archive {
 
   width: auto;
@@ -98,7 +97,7 @@
       .features {
         ul {
           float: left;
-          list-style:none;
+          list-style: none;
           padding: 0;
           margin: 0;
           &:nth-of-type(2) {
@@ -118,7 +117,7 @@
             }
           }
         }
-        .clearfix;
+        @include clearfix;
 
       }
       .fecal-text {
@@ -134,7 +133,7 @@
       }
       float: left;
     }
-    .clearfix;
+    @include clearfix;
   }
 
 }

@@ -1,4 +1,4 @@
-@import (reference) "base_includes";
+
 a {
   color: #ff0000;
   &:visited {
@@ -51,14 +51,14 @@ img.aligncenter {
 }
 
 .navbar-default .navbar-brand {
-  font-family: @font;
+  font-family: $font;
   font-size: 2.5rem;
 }
 
 
 .navbar-default .navbar-nav > li > a {
   color: #fff;
-  font-family: @font;
+  font-family: $font;
 }
 
 #footer {

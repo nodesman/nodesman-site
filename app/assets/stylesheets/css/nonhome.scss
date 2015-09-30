@@ -1,4 +1,4 @@
-@import (reference) "../style";
+
 .nonhome {
   min-height: 80%;
 
@@ -10,21 +10,21 @@
       margin: 2rem;
     }
 
-    
+
     nav {
       .navigation;
     }
     .clearfix;
   }
-  
+
   footer {
     padding: 2rem;
     background-color: #000;
   }
 }
- 
+
 @media (max-width: 700px) {
-  
+
   .nonhome {
     header {
       padding: 1rem 0 0 0;
@@ -47,7 +47,7 @@
       }
     }
   }
-  
-  
-  
+
+
+
 }

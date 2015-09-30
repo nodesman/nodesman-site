@@ -1,3 +1,4 @@
+@import "base_includes";
 .home {
   .down-arrow {
     position: absolute;
@@ -37,7 +38,7 @@
 .points {
   padding: 50px 0 0 0;
 
-  .clearfix;
+  @include clearfix;
 
   .uidevelopment {
     background-image: asset-path("points/ui.png");
@@ -81,7 +82,7 @@
       clear: left;
     }
     h2 {
-      font-family: @font;
+      font-family: $font;
       font-size: 1.5rem;
       color: black;
       text-transform: none;

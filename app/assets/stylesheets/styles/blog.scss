@@ -1,5 +1,3 @@
-@import (reference) "base_includes";
-
 .articles-list {
   min-height: 600px;
 }
@@ -12,7 +10,7 @@ div.essays {
   }
   
   h1 {
-    font-family: @font;
+    font-family: $font;
     margin-bottom: 3rem;
   }
   article {
@@ -25,7 +23,7 @@ div.essays {
       font-size: 1.8rem;
     }
     a {
-      font-family: @font;
+      font-family: $font;
       font-size: 2rem;
     }
   }

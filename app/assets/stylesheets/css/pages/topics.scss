@@ -94,22 +94,22 @@ div.topics {
 
         li {
           &.current {
-            @borderWidth: 0.5rem;
-            border-right: @borderWidth solid #4a90d8;
+            $borderWidth: 0.5rem;
+            border-right: $borderWidth solid #4a90d8;
             background-color: #eee;
             position: relative;
             &:after {
               content: '';
-              @size: 0.4rem;
-              border-left: @size solid #4a90d8;
-              border-top: @size solid transparent;
-              border-bottom: @size solid transparent;
+              $size: 0.4rem;
+              border-left: $size solid #4a90d8;
+              border-top: $size solid transparent;
+              border-bottom: $size solid transparent;
               height: 0;
               width: 0;
               display: block;
               position: absolute;
-              left: calc(100% ~"+" @borderWidth);
-              top: calc(50% ~"-" @size/2) ;
+              left: calc(100% #{"+"} $borderWidth);
+              top: calc(50% #{"-"} $size/2) ;
             }
           }
         }
@@ -141,31 +141,31 @@ div.topics {
 
     .right {
       float: left;
-      width: calc(100% ~"-" 33rem);
+      width: calc(100% #{"-"} 33rem);
       min-height: 20rem;
       padding-left: 3rem;
-      @linkColor: #4a90d8;
+      $linkColor: #4a90d8;
       .post {
         h2 {
           margin: 0;
 
           a {
             font-size: 2.4rem;
-            color: @linkColor;
+            color: $linkColor;
             text-decoration: underline;
           }
 
         }
         .read-more {
           float: right;
-          border: 0.1rem solid @linkColor;
-          color: @linkColor;
+          border: 0.1rem solid $linkColor;
+          color: $linkColor;
           border-radius: 0.3rem;
           text-decoration: none;
           padding: 0.2rem 0.7rem;
 
           &:hover {
-            background-color: @linkColor;
+            background-color: $linkColor;
             color: #fff;
           }
         }

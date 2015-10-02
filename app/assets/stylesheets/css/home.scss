@@ -9,6 +9,15 @@
     margin: auto;
   }
 
+  nav {
+    &.black {
+      background-color: #282828;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: background-color 0.3s ease-in, padding-top 0.3s ease-in, padding-bottom 0.3s ease-in;
+    }
+  }
+
   .main-title-heading {
     text-shadow: 0 1px 1px #000;
   }

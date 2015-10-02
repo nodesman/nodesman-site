@@ -17,3 +17,13 @@
 //= require featured
 //= require init
 
+$(document).ready(function () {
+  var $bodyElement = $("body");
+  var $nav = $("nav");
+  $bodyElement.scroll(function (event) {
+    var distanceOfSecondFromTop = $("#featured-works").get(0).getClientRects()[0].top;
+
+    $nav.toggleClass('black', (distanceOfSecondFromTop < 200))
+
+  });
+});

@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag "style" %>
 <% end %>
 
-<body id="bigWrapper" class="home" sdata-spy="scroll" data-target=".navbar-default" data-offset="100">
+<body id="bigWrapper" class="home" data-spy="scroll" data-target=".navbar-default" data-offset="100">
 
 <header>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="50">
@@ -54,7 +54,7 @@
     <div class="col-md-12 ">
       <a class="overlay-close">
         <br><br>
-        <%= image_tag 'xsep.png', :class => 'img-responsive center-block', :toggle => 'tooltip', :title => 'Close' %>
+        <%= image_tag 'xsep.png', :class => 'img-responsive center-block', :data => { :toggle => 'tooltip' } , :title => 'Close' %>
       </a>
     </div>
   </div>

@@ -1,21 +1,21 @@
-/*
- * = require "admin-styles/bootstrap.min"
- * = require "admin-styles/plugins"
- * = require "admin-styles/main"
- * = require "admin-styles/themes"
- */
+@import "admin-styles/bootstrap.min";
+@import "admin-styles/plugins";
+@import "admin-styles/main";
+@import "admin-styles/themes";
+
 html, body {
-    font-size: 16px;
-    min-height: 100%;
+  font-size: 16px;
+  min-height: 100%;
 }
 
 #page-container {
-    min-height: 100%;
+  min-height: 100%;
 }
+
 #sideBar {
-    bottom: 0;
-    top: 0;
-    overflow: auto;
+  bottom: 0;
+  top: 0;
+  overflow: auto;
 }
 
 @import "admin-custom/contact_info";

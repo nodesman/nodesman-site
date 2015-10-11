@@ -1,48 +1,48 @@
 (function () {
-  "use strict";
-  var admin = angular.module('Nodesman');
-  admin.directive('markdownEditor', function () {
-    return {
-        link: function (scope, el) {
-            var opts = {
-                container: 'epiceditor',
-                textarea: el[0],
-                basePath: '',
-                clientSideStorage: false,
-                localStorageName: 'epiceditor',
-                useNativeFullscreen: true,
-                parser: marked,
-                file: {
-                    name: 'epiceditor',
-                    defaultContent: '',
-                    autoSave: 100
-                },
-                theme: {
-                    base: '<%= asset_url('lib/epiceditor/base/epiceditor.css') %>',
-                    preview: '<%= asset_url('lib/epiceditor/preview/github.css') %>',
-                    editor: '<%= asset_url('lib/epiceditor/editor/epic-light.css') %>'
-                },
-                button: {
-                    preview: true,
-                    fullscreen: true,
-                    bar: "auto"
-                },
-                focusOnLoad: true,
-                shortcut: {
-                    modifier: 18,
-                    fullscreen: 70,
-                    preview: 80
-                },
-                string: {
-                    togglePreview: 'Toggle Preview Mode',
-                    toggleEdit: 'Toggle Edit Mode',
-                    toggleFullscreen: 'Enter Fullscreen'
-                },
-                autogrow: true
-            };
-            var editor = new EpicEditor(opts);
-            editor.load();
-        }
-    };
-  });
+    "use strict";
+    var admin = angular.module('Nodesman');
+    admin.directive('markdownEditor', function () {
+        return {
+            link: function (scope, el) {
+                var opts = {
+                    container: 'epiceditor',
+                    textarea: el[0],
+                    basePath: '',
+                    clientSideStorage: false,
+                    localStorageName: 'epiceditor',
+                    useNativeFullscreen: true,
+                    parser: marked,
+                    file: {
+                        name: 'epiceditor',
+                        defaultContent: '',
+                        autoSave: 100
+                    },
+                    theme: {
+                        base: '<%= asset_url('lib/epiceditor/base/epiceditor.css') %>',
+                        preview: '<%= asset_url('lib/epiceditor/preview/github.css') %>',
+                        editor: '<%= asset_url('lib/epiceditor/editor/epic-light.css') %>'
+                    },
+                    button: {
+                        preview: true,
+                        fullscreen: true,
+                        bar: "auto"
+                    },
+                    focusOnLoad: true,
+                    shortcut: {
+                        modifier: 18,
+                        fullscreen: 70,
+                        preview: 80
+                    },
+                    string: {
+                        togglePreview: 'Toggle Preview Mode',
+                        toggleEdit: 'Toggle Edit Mode',
+                        toggleFullscreen: 'Enter Fullscreen'
+                    },
+                    autogrow: true
+                };
+                var editor = new EpicEditor(opts);
+                editor.load();
+            }
+        };
+    });
 }());

@@ -1,5 +1,5 @@
-(function() {
-  window.addEventListener('load', function () {
-    $.backstretch(hero_url);
-  });
+(function () {
+    window.addEventListener('load', function () {
+        $.backstretch(hero_url);
+    });
 }());

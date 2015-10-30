@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title><%= yield :title %></title>
-  <%= yield :style %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title><%= yield :title %></title>
+    <%= yield :style %>
 </head>
-<body>
+<body class=" <%= yield :body_class %>">
+
 <%= yield %>
 
 <%= yield :post_content %>

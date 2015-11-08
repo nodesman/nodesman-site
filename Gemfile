@@ -48,3 +48,4 @@ gem 'mysql2'
 #front-end packages
 gem 'closure-compiler'
 gem 'redcarpet'
+gem 'bower-rails', '~> 0.10.0'

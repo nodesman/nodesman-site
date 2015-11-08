@@ -1,0 +1,11 @@
+# A sample Bowerfile
+# Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
+
+asset 'bootstrap'
+asset 'angular'
+asset 'jquery-backstretch-2'
+asset 'jquery', "2.1.4"
+asset 'epiceditor'
+asset 'fullpage.js'
+asset 'angular-multi-transclude'
+asset 'modernizr'

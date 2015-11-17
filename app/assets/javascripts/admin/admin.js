@@ -12,6 +12,6 @@
 //= require "epiceditor/epiceditor/js/epiceditor"
 //= require directives/MarkdownEditorDirective
 
-$(function() {
-  Index.init();
+$(function () {
+    Index.init();
 });

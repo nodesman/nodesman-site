@@ -9,6 +9,7 @@
     "fullpage.js": "latest",
     "ng-multi-transclude": "latest",
     "modernizr": "latest",
-    "marked": "latest"
+    "marked": "latest",
+    "scrollNav": "latest"
   }
 }

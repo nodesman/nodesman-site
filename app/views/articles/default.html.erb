@@ -1,5 +1,5 @@
 <%= content_for :style do %>
-    <%= stylesheet_link_tag "articles" %>
+    <%= stylesheet_link_tag 'articles' %>
 <% end %>
 
 <%= content_for :title do %>
@@ -7,17 +7,22 @@
 <% end %>
 
 <%= content_for :post_content do %>
-    <%= javascript_include_tag "articles.js" %>
-    <%= render "typekit" %>
+    <%= javascript_include_tag 'articles.js' %>
+    <%= render 'typekit' %>
+    <% if @article.focus_piece == true %>
+        <%= javascript_include_tag 'focus_piece' %>
+
+    <% end %>
+
 <% end %>
 
-<%= render "header" %>
+<%= render 'header' %>
 <div class="wrapper">
-  <div class="article-page-container nonhome">
-    <h1><%= @article.title %></h1>
-    <div class="content">
-          <%= raw @article.html %>
-    </div>
-  </div>
+    <div class="article-page-container nonhome">
+        <h1><%= @article.title %></h1>
 
+        <div class="content">
+            <%= raw @article.html %>
+        </div>
+    </div>
 </div>

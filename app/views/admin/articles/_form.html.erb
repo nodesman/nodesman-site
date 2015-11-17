@@ -1,33 +1,44 @@
 <div class="clearfix">
-<%= form_for [:admin, @article] do |f| %>
+    <%= form_for [:admin, @article] do |f| %>
 
-    <div class="field col-xs-12">
-      <label class="col-xs-4">Title: </label>
-      <div class="field-container col-xs-8">
-        <%= f.text_field :title, :class => 'col-xs-12' %>
-      </div>
-    </div>
+        <div class="field col-xs-12">
+            <label class="col-xs-4">Title: </label>
 
-    <div class="field col-xs-12">
-      <label class="col-xs-4">Published Date: </label>
-      <div class="field-container col-xs-8 ">
-        <%= f.datetime_select :created_at %>
-      </div>
-    </div>
-      <div class="field col-xs-12">
-        <label class="col-xs-4">URL Slug: </label>
-        <div class="field-container col-xs-8">
-          <%= f.text_field :url_slug, :class => 'col-xs-12' %>
+            <div class="field-container col-xs-8">
+                <%= f.text_field :title, :class => 'col-xs-12' %>
+            </div>
         </div>
-      </div>
-    <div class="field content-field col-xs-12">
-      <div class="hidden"><%= f.text_area :content, :rows => 30, :class => 'col-xs-12', 'markdown-editor' => '1' %></div>
-      <div class="field-container" id="epiceditor">
-      </div>
-    </div>
 
-    <div class="field col-xs-3">
-      <%= f.submit :value => "Save Article", :class => 'btn btn-primary save-button' %>
-    </div>
-<% end %>
+        <div class="field col-xs-12">
+            <label class="col-xs-4">Published Date: </label>
+
+            <div class="field-container col-xs-8 ">
+                <%= f.datetime_select :created_at %>
+            </div>
+        </div>
+        <div class="field col-xs-12">
+            <label class="col-xs-4">Focus Piece?: </label>
+
+            <div class="field-container col-xs-8 ">
+                <%= f.check_box :focus_piece %>
+            </div>
+        </div>
+
+        <div class="field col-xs-12">
+            <label class="col-xs-4">URL Slug: </label>
+
+            <div class="field-container col-xs-8">
+                <%= f.text_field :url_slug, :class => 'col-xs-12' %>
+            </div>
+        </div>
+        <div class="field content-field col-xs-12">
+            <div class="hidden"><%= f.text_area :content, :rows => 30, :class => 'col-xs-12', 'markdown-editor' => '1' %></div>
+            <div class="field-container" id="epiceditor">
+            </div>
+        </div>
+
+        <div class="field col-xs-3">
+            <%= f.submit :value => "Save Article", :class => 'btn btn-primary save-button' %>
+        </div>
+    <% end %>
 </div>

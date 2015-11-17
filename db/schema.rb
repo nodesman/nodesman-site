@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703025417) do
+ActiveRecord::Schema.define(version: 20151117140524) do
 
   create_table "articles", force: :cascade do |t|
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.string   "title",      limit: 255
-    t.text     "content",    limit: 65535
-    t.boolean  "show_date",  limit: 1,     default: false
-    t.string   "url_slug",   limit: 255
-    t.text     "html",       limit: 65535
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.string   "title",          limit: 255
+    t.text     "content",        limit: 65535
+    t.boolean  "show_date",      limit: 1,     default: false
+    t.string   "url_slug",       limit: 255
+    t.text     "html",           limit: 65535
+    t.integer  "focus_piece_id", limit: 4
+    t.boolean  "focus_piece",    limit: 1,     default: false
   end
 
   create_table "contact_form_entries", force: :cascade do |t|
@@ -31,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150703025417) do
     t.string   "subject",    limit: 255
     t.text     "message",    limit: 65535
     t.string   "ip_address", limit: 255
+  end
+
+  create_table "focus_pieces", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "snippets", force: :cascade do |t|

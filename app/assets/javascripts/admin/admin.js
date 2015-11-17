@@ -1,15 +1,15 @@
 //= require ../lib/adminjs/vendor/modernizr-2.7.1-respond-1.4.2.min
-//= require ../lib/adminjs/jquery-1.11.2.min.js
-//= require ../lib/adminjs/vendor/bootstrap.min
+//= require jquery/dist/jquery
+//= require "bootstrap/dist/js/bootstrap"
 //= require ../lib/adminjs/plugins
 //= require ../lib/adminjs/app
 //= require ../lib/adminjs/pages/index
 
-//= require ../lib/angular
-//= require ../lib/multi-transclude
-//= require ../lib/marked.min
+//= require "angular/angular"
+//= require "ng-multi-transclude/src/multi-transclude"
+//= require "marked/marked.min"
 //= require ../Nodesman
-//= require ../lib/epiceditor
+//= require "epiceditor/epiceditor/js/epiceditor"
 //= require directives/MarkdownEditorDirective
 
 $(function() {

@@ -7,5 +7,7 @@ asset 'jquery-backstretch-2'
 asset 'jquery', "2.1.4"
 asset 'epiceditor'
 asset 'fullpage.js'
-asset 'angular-multi-transclude'
+asset 'ng-multi-transclude'
 asset 'modernizr'
+asset 'marked'
+asset 'epiceditor'

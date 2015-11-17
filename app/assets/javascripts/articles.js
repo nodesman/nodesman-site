@@ -5,13 +5,13 @@
 
 
 function ready() {
-  hljs.initHighlightingOnLoad();
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-    $(block).css({
-      backgroundColor: 'transparent'
+    hljs.initHighlightingOnLoad();
+    $('pre code').each(function (i, block) {
+        hljs.highlightBlock(block);
+        $(block).css({
+            backgroundColor: 'transparent'
+        });
     });
-  });
 }
 
 window.addEventListener("load", ready);

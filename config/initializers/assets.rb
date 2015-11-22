@@ -8,4 +8,4 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( lib/epiceditor/base/epiceditor.css lib/epiceditor/preview/github.css lib/epiceditor/editor/epic-light.css search.js contact.css style.css articles.css portfolio.css snippet.css admin.css *.eot *.woff *.ttf *.svg )
+Rails.application.config.assets.precompile += %w( lib/epiceditor/base/epiceditor.css lib/epiceditor/preview/github.css lib/epiceditor/editor/epic-light.css search.js contact.css style.css articles.css portfolio.css snippet.css admin.css *.eot *.woff *.ttf *.svg *.woff2 *.html )

@@ -1,6 +1,5 @@
 //= require "jquery/dist/jquery"
 //= require "lib/jquery.backstretch.min"
-//= require "lib/jquery.fittext"
 //= require "lib/jquery.fullpage"
 //= require "navtoggler"
 (function () {

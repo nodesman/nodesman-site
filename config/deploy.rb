@@ -60,8 +60,6 @@ namespace :deploy do
           execute :rake, 'db:create'
           execute :rake, 'db:schema:load'
           execute :rake, 'db:seed'
-          execute :rake, 'bower:install:deployment'
-          execute :rake, 'bower:resolve'
           execute :rake, 'assets:precompile'
         end
       end

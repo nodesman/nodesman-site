@@ -1,4 +1,4 @@
-//= require "scrollNav/dist/jquery.scrollNav.js"
+//= require "scrollNav/dist/jquery.scrollNav.min.js"
 
 $(function () {
     $(".content").scrollNav({

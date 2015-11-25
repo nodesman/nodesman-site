@@ -13,4 +13,4 @@ asset 'marked'
 asset 'epiceditor'
 asset 'scrollNav'
 
-resolution "bower", "2.1.4"
+resolution "jquery", "2.1.4"

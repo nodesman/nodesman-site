@@ -58,7 +58,7 @@ namespace :deploy do
           execute :bundle, :install
           execute :rake, 'db:drop'
           execute :rake, 'db:create'
-          execute :rake, 'db:load'
+          execute :rake, 'db:schema:load'
           execute :rake, 'db:seed'
           execute :rake, 'assets:precompile'
         end

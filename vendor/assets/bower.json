@@ -4,12 +4,15 @@
     "bootstrap": "latest",
     "angular": "latest",
     "jquery-backstretch-2": "latest",
-    "jquery": "2.1.4",
+    "jquery": "latest",
     "epiceditor": "latest",
     "fullpage.js": "latest",
     "ng-multi-transclude": "latest",
     "modernizr": "latest",
     "marked": "latest",
     "scrollNav": "latest"
+  },
+  "resolutions": {
+    "bower": "2.1.4"
   }
 }

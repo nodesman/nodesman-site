@@ -4,7 +4,7 @@
 asset 'bootstrap'
 asset 'angular'
 asset 'jquery-backstretch-2'
-asset 'jquery', "2.1.4"
+asset 'jquery'
 asset 'epiceditor'
 asset 'fullpage.js'
 asset 'ng-multi-transclude'
@@ -12,3 +12,5 @@ asset 'modernizr'
 asset 'marked'
 asset 'epiceditor'
 asset 'scrollNav'
+
+resolution "bower", "2.1.4"

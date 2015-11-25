@@ -1,5 +1,5 @@
 //= require ../lib/adminjs/vendor/modernizr-2.7.1-respond-1.4.2.min
-//= require jquery/dist/jquery
+//= require jquery/jquery
 //= require bootstrap/dist/js/bootstrap
 //= require ../lib/adminjs/plugins
 //= require ../lib/adminjs/app

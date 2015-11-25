@@ -3,19 +3,46 @@
 @import "lib/syntaxhighlight/default";
 @import "lib/syntaxhighlight/idea";
 
-
 .article-page-container {
-  padding: 10rem  10rem 0 10rem;
-  width: 100rem;
+  padding: 10rem 10rem 0 10rem;
+  width: 120rem;
   margin: 0 auto;
-
+  position: relative;
+  @media screen and (max-width: 1430px) {
+    width: 100%;
+    padding: 100px 1%;
+  }
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 4vw !important;
+    }
+  }
   .content {
     width: 90%;
-    margin: 0 auto;
     padding: 10px;
-    margin-top: 20px;
+    margin: 20px auto 0;
   }
-  
+
+  @media screen and (max-width: 1440px) {
+    .scroll-nav {
+      padding-left: 80px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .scroll-nav {
+      position: absolute;
+      left: -100px;
+      float: left;
+      padding-left: 0;
+      width: 300px;
+    }
+  }
+
   h1 {
     letter-spacing: normal;
     text-align: center;

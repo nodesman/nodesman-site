@@ -14,18 +14,7 @@
 //= require lib/modernizr
 //= require script
 //= require home-preloader
+//= require "navtoggler"
 //= require featured
 //= require init
 
-$(document).ready(function () {
-  var $bodyElement = $("body");
-  var $nav = $("nav");
-  var timeout;
-  $bodyElement.scroll(function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
-      var distanceOfSecondFromTop = $("#featured-works").get(0).getClientRects()[0].top;
-      $nav.toggleClass('black', (distanceOfSecondFromTop < 200));
-    }, 400)
-  });
-});

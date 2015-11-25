@@ -1,43 +1,56 @@
 @import "base_includes";
-@import "styles/portfolio-archive";
-@import "styles/angularfeed";
-@import "styles/wpa";
 @import "styles/wpa-full";
+@import "portfolio/archive";
+@import "fullpage.js/jquery.fullPage.scss";
 
 .portfolio-hero {
   text-align: center;
 }
 
-.portfolioIntro {
-  position: relative;
-  z-index: 2;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: 50% 0, 50% 0, 50% 0, 50% 0;
-  background-repeat: repeat, repeat, repeat, no-repeat;
-}
-
 .portfolio-list {
+
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: #fff;
+  }
 
   .above-fold {
     position: relative;
+    padding-top: 70px;
+    @media screen and (max-width: 1024px) {
+      h2.section-heading {
+        font-size: 10vw;
+        transition: font-size 0.3s ease-in;
+      }
+    }
   }
+
   .floating-content {
-    position: absolute;
-    bottom: 30px;
-    right: 50px;
     font-family: $font;
     color: #fff;
-
+    position: relative;
+    top: 10%;
+    .separator-container {
+      text-align: center;
+      img {
+        display: inline-block;
+        @media screen and (max-width: 1440px) {
+          width: 10vw;
+        }
+      }
+    }
+    .section-heading {
+      text-align: center;
+    }
     h2 {
-      font-size: 5vw;
-      font-family: $font;
-      text-shadow: 0 0 3px #000 ;
+      @media screen and (max-width: 1600px) {
+        font-size: 90px;
+      }
+      text-shadow: 0 0 3px #000;
       margin: 10px 0;
       padding: 0;
       line-height: 1em;
+      font-family: "serifa";
+      font-weight: bold;
     }
 
     p {
@@ -48,8 +61,7 @@
 }
 
 #portfolio .black-overlay {
-  background: radial-gradient(ellipse at 0 100%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%); /* W3C */
-  filter: "progid:DXImageTransform.Microsoft @include gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1)"; /* IE6-9 fallback on horizontal gradient */
+  background: radial-gradient(ellipse at 0 64%, transparent 0%, black 100%);
 }
 
 .portfolio-wrapper, #portfolio {

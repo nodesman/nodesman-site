@@ -1,7 +1,7 @@
 <% content_for :post_content do %>
-    <script src="http://use.typekit.net/iku8pjx.js"></script>
+    <script src="https://use.typekit.net/yef1nup.js"></script>
     <script>try {
-        Typekit.load();
+        Typekit.load({async: true});
     } catch (e) {
     }</script>
 <% end %>
@@ -19,99 +19,99 @@
     <%= javascript_include_tag 'portfolio-list' %>
 <% end %>
 
-<% content_for :body_class do %>portfolio-list
+<% content_for :body_class do %>portfolio-list toggle-nav
 <% end %>
 
 <div class="portfolio-wrapper">
-    <section id="portfolio">
-        <div class="above-fold">
+    <section id="portfolio" class="portfolio-archive">
+        <div data-anchor="portfolio" id="" class="above-fold section black-overlay">
             <div class="floating-content">
-                <h2>Portfolio</h2>
+                <h2 class="section-heading">PORTFOLIO</h2>
+
+                <div class="separator-container">
+                    <%= image_tag 'separatorWhite.png' %>
+                </div>
             </div>
         </div>
-        <div class="items">
+        <div data-anchor="archive" class="archive section item below-fold">
+            <div class="content">
+                <div class="description-container">
+                    <h2 class="section-heading">Archive</h2>
+                    <%= image_tag 'portfolio/archivescreens.png', :width => '80%', :class => 'post-thumb' %>
+                    <p>Ever wanted to snapshot a page before it disappeared? May be snapshot a public record of a event
+                        having occured
+                        on the internet before it gets taken down.May be a journalist or a public figure
+                        made a blaring error and you want to record that permanently for posterity as a kind of proof
+                        of event. This application allows you to perfeclty snapshot a web page so that even if the
+                        original goes down, you will be able to view the snapshotted version. </p>
 
-            <div class="portfolio-archive">
-                <article>
-                    <div class="angularfeed portfolio-piece excerpt">
-                        <%= link_to '/angularfeed' do %><%= image_tag 'portfolio/angularfeed-excerpt.png', :class => 'teaser' %>
+                    <div class="button-row">
+                        <a href="http://archive.rip/" target="_blank" class="btn btn-default read-more ">
+                            VIEW SITE
+                        </a>
+                    </div>
+                </div>
+                <div class="background"></div>
+            </div>
+        </div>
+        <div data-anchor="angularfeed" class="angular section item">
+            <div class="angularfeed portfolio-piece">
+                <div class="content">
+
+                    <div class="lead-text">
+                        <h2 class="section-heading">AngularFeed</h2>
+
+                        <p class="excerpt">AngularJs based RSS Feed Reader</p>
+
+                        <%= link_to '/angularfeed ' do %><%= image_tag 'portfolio/angularfeed-excerpt.png', :class => 'screen' %>
                         <% end %>
-                        <div class="lead-text">
-                            <h1><%= link_to angular_feed_url do %>AngularFeed
-                                <% end %></h1>
 
-                            <p>AngularJs based RSS Feed Reader</p>
-
-                            <div class="features">
-                                <ul>
-                                    <li>Subscribe to any number of RSS feeds organized into a optional folder
-                                        structure
-                                    </li>
-                                    <li>No account needed. Your subscriptions reside on your browser in the
-                                        localStorage
-                                    </li>
-                                    <li>Organized date wise and presented in a readable format along the lines of Reeder
-                                        2.
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="details">
-                                <a href="https://github.com/nodesman/angularfeed">View on Github</a> |
-                                <a href="http://angularfeed.nodesman.com">View demo</a>
-                            </div>
-                            <div class="tags">
-                <span class="tag"><a href="#" rel="tag">AngularJs</a><a href="#" rel="tag">localStorage</a><a href="#" rel="tag">Rails
-                    4</a></span></div>
-                            <%= link_to 'READ MORE', angular_feed_url, :class => 'btn btn-default btn-black read-more' %>
+                        <div class="text-container">
+                            <p>Subscribe to any number of RSS feeds organized into a optional folder
+                                structure. Does not require an account. Your subscriptions reside on your browser in the
+                                localStorage. Organized date wise and presented in a readable format along the lines of
+                                Reeder 2.</p>
+                        </div>
+                        <div class="button-row">
+                            <a href="https://github.com/nodesman/angularfeed" class=" col-md-12 btn btn-default read-more">Github</a>
+                            <a href="http://angularfeed.nodesman.com" class=" col-md-12 btn btn-default read-more">Visit Site</a>
+                            <%= link_to 'READ MORE', angular_feed_url, :class => ' col-md-12 btn btn-default read-more' %>
                         </div>
                     </div>
-                </article>
-                <article>
-                    <div class="wpa portfolio-piece excerpt">
-                        <%= link_to '/wp' do %><%= image_tag 'portfolio/wpa-excerpt.png', :class => 'teaser' %>
-                        <% end %>
-                        <div class="lead-text">
-                            <h1><%= link_to wpr_url do %>WP Autoresponder (aka Javelin Email Marketing)
-                                <% end %></h1>
-                            <span class="minor-blue-heading">WORDPRESS EXTENSION</span>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="email" class="section email item">
+            <div class="content">
+                <div class="lead-text">
+                    <h2 class="section-heading">WP Autoresponder</h2>
 
-                            <div class="stats">
-                                <span class="fecal-text">124,000</span> |
-                                <span class="fecal-text">13 releases</span>
-                            </div>
 
-                            <p>WP Autoresponder was a WordPress extension that brought the email marketing capabilities
-                                of popular
-                                email services like mailchimp and Aweber to WordPress.</p>
 
-                            <div class="features">
-                                <ul>
-                                    <li>Follow Up Autoresponders</li>
-                                    <li>Deliver blog posts as autoresponder emails</li>
-                                    <li>Deliver blog post emails as they happen</li>
-                                </ul>
+                    <div class="description-content">
 
-                                <ul>
-                                    <li>Send segmented broadcasts</li>
-                                    <li>Provide subscription to specific post categories.</li>
-                                    <li>Attach custom fields to all outgoing email</li>
-                                </ul>
-                            </div>
-                            <div class="details">
-                                <a href="https://github.com/nodesman/wp-autoresponder">View on Github</a>
-                            </div>
-                            <div class="tags">
-                                <span class="tag"><a href="#" rel="tag">PHP</a><a href="#" rel="tag">WordPress</a></span>
-                            </div>
-                            <%= link_to 'READ MORE', wpr_url, :class => 'btn btn-default btn-black read-more' %>
+                        <div class="stats">
+                            <span class="minor-blue-heading">Wordpress Extension</span> |
+                            <span class="fecal-text">124,000</span> |
+                            <span class="fecal-text">13 releases</span>
+                        </div>
+
+
+                        <p>This is a wordpress extension to add email marketing capabilities to WordPress. It brings
+                            almost
+                            all the functionality that popular services such as Aweber and Mailchimp have to
+                            WordPress. </p>
+
+                        <div class="details">
+                            <a href="https://github.com/nodesman/wp-autoresponder" class="btn btn-default read-more ">Github</a>
+                            <%= link_to 'READ MORE', wpr_url, :class => 'btn btn-default read-more' %>
                         </div>
                     </div>
-                </article>
-                <h2 class="more btn btn-default btn-black ">More coming soon...</h2>
+                </div>
             </div>
         </div>
     </section>
 </div>
 <script>
-    var hero_url = '<%= asset_path('pictures/portfolio.png') %>'
+    var hero_url = '<%= asset_path('portfolio/wood.jpg') %>'
 </script>

@@ -1,45 +1,58 @@
 .nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
-@mixin rounded($radius)
-{
+@mixin rounded($radius) {
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
   border-radius: $radius;
 }
 
-@mixin rounded-top-left($radius)
-{
+@mixin rounded-top-left($radius) {
   -moz-border-radius-topleft: $radius;
   -webkit-border-top-left-radius: $radius;
   border-top-left-radius: $radius;
 }
-@mixin rounded-bottom-left($radius)
-{
+
+@mixin rounded-bottom-left($radius) {
   -moz-border-radius-bottomleft: $radius;
   -webkit-border-bottom-left-radius: $radius;
   border-bottom-left-radius: $radius;
 }
 
-@mixin rounded-bottom-right($radius)
-{
+@mixin rounded-bottom-right($radius) {
   -moz-border-radius-bottomright: $radius;
   -webkit-border-bottom-right-radius: $radius;
   border-bottom-right-radius: $radius;
 }
 
-@mixin rounded-top-right($radius)
-{
+@mixin rounded-top-right($radius) {
   -moz-border-radius-topright: $radius;
   -webkit-border-top-right-radius: $radius;
   border-top-right-radius: $radius;
 }
 
 .clearfix {
-   &:after {
-     content: '';
-     display: block;
-     clear: both;
-   } 
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.toggle-nav {
+  nav {
+    background-color: transparent;
+    &.black {
+      background-color: #282828;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: background-color 0.3s ease-in, padding-top 0.3s ease-in, padding-bottom 0.3s ease-in;
+    }
+  }
+  .nav.navbar-nav {
+    li {
+      text-shadow: 1px 1px 2px #444;
+    }
+  }
 }

@@ -1,0 +1,163 @@
+$sectionBgColor: #333;
+.portfolio-archive {
+
+  .section-heading {
+    font-family: "le-monde-livre-std";
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+  }
+
+  .section {
+    .content {
+      padding-top: 70px;
+      color: #fff;
+    }
+    .section-heading {
+      text-align: center;
+      display: block;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .archive {
+    background: url(image-path("pictures/archive.jpg")), radial-gradient(ellipse at 0 64%, transparent 0%, black 100%);
+    background-size: cover;
+    position: relative;
+
+    .post-thumb {
+      width: 300px;
+      display: block;
+      text-align: center;
+    }
+
+    .content {
+      width: 50%;
+      background-color: $sectionBgColor;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: auto;
+    }
+    @media screen and (max-width: 1440px) {
+      .content {
+        width: 50%;
+        transition: width 1s ease-out;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .content {
+        width: 100%;
+        transition: width 1s ease-in;
+      }
+      .button-row {
+        text-align: center;
+      }
+    }
+
+    .description-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 1;
+      h2, p {
+        color: #fff;
+      }
+
+      .post-thumb {
+        display: block;
+        margin: 0 auto;
+      }
+      padding: 70px 40px 20px 20px;
+
+    }
+  }
+
+  .email {
+    background: url(image-path("pictures/email.jpg")), radial-gradient(ellipse at 0 64%, transparent 0%, black 100%);
+    .content {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: $sectionBgColor;
+      padding: 70px 40px 20px 40px;
+      transition: width 0.3s ease-out;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .content {
+        width: 100%;
+        transition: width 0.3s ease-in
+      }
+    }
+
+    .stats {
+      text-align: center;
+      color: #aaa;
+      padding: 30px;
+    }
+  }
+  .angular {
+    background-image: url(image-path("pictures/reading-news.jpg"));
+    background-size: cover;
+    position: relative;
+
+    .content {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      background-color: $sectionBgColor;
+      transition: width 0.3s ease-in;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .content {
+        width: 100%;
+        transition: 0.3s width ease-in;
+      }
+    }
+
+    .text-container {
+      padding: 20px;
+    }
+
+    .button-row {
+      text-align: center;
+      .btn {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 800px) {
+        .btn {
+          display: block;
+          width: 60%;
+          margin: 10px auto;
+        }
+      }
+    }
+
+
+    .excerpt {
+      text-align: center;
+      color: #fff;
+    }
+
+    .screen {
+      width: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+}

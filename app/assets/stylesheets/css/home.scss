@@ -1,8 +1,9 @@
 @import "base_includes";
+
 .home {
   .down-arrow {
     position: absolute;
-    bottom: 3rem ;
+    bottom: 3rem;
     left: 0;
     right: 0;
     width: 204px;
@@ -10,12 +11,7 @@
   }
 
   nav {
-    &.black {
-      background-color: #282828;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      transition: background-color 0.3s ease-in, padding-top 0.3s ease-in, padding-bottom 0.3s ease-in;
-    }
+
   }
 
   .main-title-heading {
@@ -38,6 +34,14 @@
   .container {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #3f3f3f;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .sectionIntro {
     margin: 0 0 50px 0;
@@ -72,7 +76,6 @@
     background-position-x: 20px;
   }
 
-
   .ux {
     background-image: asset-path("points/ux.png");
   }
@@ -84,8 +87,6 @@
     padding-left: 150px;
     background-repeat: no-repeat;
     background-position: 30px 60%;
-
-
 
     &:nth-child(2n+1) {
       clear: left;
@@ -130,7 +131,6 @@
     }
   }
 }
-
 
 .above-fold-image-loader {
   position: fixed;

@@ -1,4 +1,4 @@
-//= require jquery/jquery
+//= require jquery/dist/jquery
 //= require lib/modernizr
 //= require lib/highlight.pack
 //= require script

@@ -1,4 +1,4 @@
-//= require "jquery/jquery"
+//= require "jquery/dist/jquery"
 //= require "lib/jquery.backstretch.min"
 //= require "lib/jquery.fullpage"
 //= require "navtoggler"

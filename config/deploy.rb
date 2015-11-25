@@ -66,6 +66,7 @@ namespace :deploy do
     end
   end
 
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -75,4 +76,17 @@ namespace :deploy do
     end
   end
 end
+
+namespace :bower do
+  desc 'Install bower'
+  task :install do
+    on roles(:web) do
+      within release_path do
+        execute :rake, 'bower:install CI=true'
+      end
+    end
+  end
+end
+
+before 'deploy:compile_assets', 'bower:install'
 

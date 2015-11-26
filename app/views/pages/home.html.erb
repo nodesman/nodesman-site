@@ -100,12 +100,6 @@
               <%= link_to article_url(article.url_slug) do %>
                   <h2><%= article.title %></h2>
               <% end %>
-              <div>
-                <%
-                   content_truncate_words = article.content.truncate_words 30
-                %>
-                <%= content_truncate_words.html_safe %>
-              </div>
             </div>
         <% end %>
       </div>

@@ -79,6 +79,7 @@ $sectionBgColor: #333;
   }
 
   .email {
+    position: relative;
     background: url(image-path("pictures/email.jpg")), radial-gradient(ellipse at 0 64%, transparent 0%, black 100%);
     .content {
       position: absolute;

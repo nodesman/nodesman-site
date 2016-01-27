@@ -4,8 +4,6 @@ gem 'capistrano-passenger'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-
-
 # Use SCSS for stylesheets
 gem 'therubyracer'
 gem 'sass'
@@ -48,3 +46,4 @@ gem 'mysql2'
 gem 'closure-compiler'
 gem 'redcarpet'
 gem 'bower-rails', '~> 0.10.0'
+gem 'rails_12factor', group: :production

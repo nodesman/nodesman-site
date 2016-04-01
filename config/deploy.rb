@@ -6,11 +6,12 @@ lock '3.4.0'
 
 set :application, 'nodesman'
 
-set :rails_env, "production"
+set :rails_env, 'production'
 set :db_local_clean, true
 set :db_remote_clean, true
 
-set :local_rails_env, "development"
+
+set :local_rails_env, 'development'
 
 set :repo_url, 'git@bitbucket.org:nodesman/nodesman.git'
 # Default branch is :master

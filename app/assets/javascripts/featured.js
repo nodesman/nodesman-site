@@ -45,7 +45,9 @@
         $("div.overlay").animate({scrollTop: 0}, "slow");
     }
 
-    triggerBttn.addEventListener('click', toggleOverlay);
+    if (null !== triggerBttn) {
+        triggerBttn.addEventListener('click', toggleOverlay);
+    }
     if (triggerBttnTwo)
         triggerBttnTwo.addEventListener('click', toggleOverlay);
     if (triggerBttnThree)

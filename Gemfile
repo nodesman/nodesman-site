@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'capistrano-passenger'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'therubyracer'
@@ -42,7 +42,7 @@ group :development, :test do
 end
 gem 'capistrano-db-tasks', require: false
 gem 'seed_dump'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 #front-end packages
 gem 'closure-compiler'
 gem 'redcarpet'

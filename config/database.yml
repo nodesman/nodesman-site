@@ -17,8 +17,4 @@ test:
   host: localhost
 
 production:
-  adapter: mysql2
-  database: nodesman_com
-  username: nodesman_com
-  password: Famous@2015
-  host: localhost
+  url: <%= ENV['DATABASE_URL'] %>

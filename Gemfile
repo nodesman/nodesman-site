@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 gem 'capistrano-passenger'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -47,3 +48,4 @@ gem 'closure-compiler'
 gem 'redcarpet'
 gem 'bower-rails', '~> 0.10.0'
 gem 'rails_12factor', group: :production
+gem 'pg'
